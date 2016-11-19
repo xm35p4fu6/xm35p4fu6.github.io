@@ -2,6 +2,38 @@
 
   
     {
+      "title"			: "poj-2393-Yogurt factory",
+      "link"			: "http://localhost:4000/pro-sol/Yogurt-factory/",
+      "excerpt"		: "greedy"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-1862-Stripies",
+      "link"			: "http://localhost:4000/pro-sol/Stripies/",
+      "excerpt"		: "greedy"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3190-Stall Reservations",
+      "link"			: "http://localhost:4000/pro-sol/Stall-Reservations/",
+      "excerpt"		: "greedy"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-2718-Smallest Difference",
+      "link"			: "http://localhost:4000/pro-sol/Smallest-Difference/",
+      "excerpt"		: "search"
+    }
+  
+
+  
+    ,{
       "title"			: "poj-1979-Red and Black",
       "link"			: "http://localhost:4000/pro-sol/Red-and-Black/",
       "excerpt"		: "dfs"
@@ -10,9 +42,57 @@
 
   
     ,{
+      "title"			: "poj-1328-Radar Installation",
+      "link"			: "http://localhost:4000/pro-sol/Radar-Installation/",
+      "excerpt"		: "greedy"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-1017-Packets",
+      "link"			: "http://localhost:4000/pro-sol/Packets/",
+      "excerpt"		: "greedy"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3669-Meteor Shower",
+      "link"			: "http://localhost:4000/pro-sol/Meteor-Shower/",
+      "excerpt"		: "bfs"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3050-Hopscotch",
+      "link"			: "http://localhost:4000/pro-sol/Hopscotch/",
+      "excerpt"		: "search"
+    }
+  
+
+  
+    ,{
       "title"			: "poj-3009-Curing 2.0",
       "link"			: "http://localhost:4000/pro-sol/Curing-2.0/",
       "excerpt"		: "dfs"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-2376-Cleaning Shifts",
+      "link"			: "http://localhost:4000/pro-sol/Cleaning-Shifts/",
+      "excerpt"		: "greedy"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3187-Backward Digit Sums",
+      "link"			: "http://localhost:4000/pro-sol/Backward-Digit-Sums/",
+      "excerpt"		: "search"
     }
   
 
