@@ -6,17 +6,13 @@
 <head>
 <meta charset="utf-8">
 <title>poj-1979-Red and Black &#8211; xm3の倉庫</title>
-<meta name="description" content="Red and Black
-
-">
-<meta name="keywords" content="">
+<meta name="description" content="dfs">
+<meta name="keywords" content="dfs">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="poj-1979-Red and Black">
-<meta name="twitter:description" content="Red and Black
-
-">
+<meta name="twitter:description" content="dfs">
 
 
 
@@ -27,9 +23,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
 <meta property="og:title" content="poj-1979-Red and Black">
-<meta property="og:description" content="Red and Black
-
-">
+<meta property="og:description" content="dfs">
 <meta property="og:url" content="http://localhost:4000/pro-sol/Red-and-Black/">
 <meta property="og:site_name" content="xm3の倉庫">
 
@@ -119,7 +113,7 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          
+          <li><a href="http://localhost:4000/tags/#dfs" title="Pages tagged dfs">dfs</a></li>
         </ul>
         
           <h1 class="entry-title">poj-1979-Red and Black</h1>
@@ -133,7 +127,7 @@
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
         <span class="entry-date date published"><time datetime="2016-11-19T00:00:00+08:00"><i class="fa fa-calendar-o"></i> November 19, 2016</time></span>
         
-        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
         
       </footer>
@@ -141,8 +135,49 @@
         <h3 id="red-and-blackhttppojorgproblemid1979"><a href="http://poj.org/problem?id=1979">Red and Black</a></h3>
 
 <h5 id="dfs">dfs解</h5>
-<div class="language-c++ highlighter-rouge"><pre class="highlight"><code>
-<span class="cp">#include &lt;iostream&gt;
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre></td><td class="code"><pre><span class="cp">#include &lt;iostream&gt;
 #define GI(i) scanf("%d", &amp;i)
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -183,10 +218,34 @@
     <span class="p">}</span>
     <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">dfs</span><span class="p">(</span><span class="n">ci</span><span class="p">,</span> <span class="n">cj</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="p">}</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</code></pre>
-</div>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'xm35p4fu6'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
         
       </div><!-- /.entry-content -->

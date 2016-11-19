@@ -4,7 +4,7 @@
     {
       "title"			: "poj-1979-Red and Black",
       "link"			: "http://localhost:4000/pro-sol/Red-and-Black/",
-      "excerpt"		: "Red and Black"
+      "excerpt"		: "dfs"
     }
   
 
@@ -12,7 +12,15 @@
     ,{
       "title"			: "poj-3009-Curing 2.0",
       "link"			: "http://localhost:4000/pro-sol/Curing-2.0/",
-      "excerpt"		: "Curing 2.0"
+      "excerpt"		: "dfs"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3040-Allowance",
+      "link"			: "http://localhost:4000/pro-sol/Allowance/",
+      "excerpt"		: "greedy"
     }
   
 

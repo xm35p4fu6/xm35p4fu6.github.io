@@ -2,12 +2,15 @@
 layout: post
 title: poj-1979-Red and Black
 categories: pro-sol
+excerpt: "dfs"
+tag: [dfs]
+
 ---
 
 ### [Red and Black](http://poj.org/problem?id=1979)
 
 ##### dfs解
-```c++
+{% highlight cpp linenos %}
 
 #include <iostream>
 #define GI(i) scanf("%d", &i)
@@ -52,4 +55,4 @@ int main(){
   }
 }
 
-```
+{% endhighlight %}
