@@ -5,13 +5,13 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>poj-1328-Radar Installation &#8211; xm3の倉庫</title>
+<title>poj-3262-Protecting the Flowers &#8211; xm3の倉庫</title>
 <meta name="description" content="greedy">
 <meta name="keywords" content="greedy">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="poj-1328-Radar Installation">
+<meta name="twitter:title" content="poj-3262-Protecting the Flowers">
 <meta name="twitter:description" content="greedy">
 
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj-1328-Radar Installation">
+<meta property="og:title" content="poj-3262-Protecting the Flowers">
 <meta property="og:description" content="greedy">
-<meta property="og:url" content="http://localhost:4000/pro-sol/Radar-Installation/">
+<meta property="og:url" content="http://localhost:4000/pro-sol/Protecting-the-Flowers/">
 <meta property="og:site_name" content="xm3の倉庫">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/pro-sol/Radar-Installation/">
+<link rel="canonical" href="http://localhost:4000/pro-sol/Protecting-the-Flowers/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -117,7 +117,7 @@
           <li><a href="http://localhost:4000/tags/#greedy" title="Pages tagged greedy">greedy</a></li>
         </ul>
         
-          <h1 class="entry-title">poj-1328-Radar Installation</h1>
+          <h1 class="entry-title">poj-3262-Protecting the Flowers</h1>
         
       </header>
       <footer class="entry-meta">
@@ -126,7 +126,7 @@
           <img src="http://localhost:4000/images/chi.png" class="bio-photo" alt="呂振麒 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
-        <span class="entry-date date published"><time datetime="2016-11-19T00:00:00+08:00"><i class="fa fa-calendar-o"></i> November 19, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-11-23T00:00:00+08:00"><i class="fa fa-calendar-o"></i> November 23, 2016</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
@@ -135,7 +135,7 @@
       <div class="entry-content">
         <h2 id="section">傳送門：</h2>
 
-<h4 id="radar-installationhttppojorgproblemid1328"><a href="http://poj.org/problem?id=1328">Radar Installation</a></h4>
+<h3 id="protecting-the-flowershttppojorgproblemid3262"><a href="http://poj.org/problem?id=3262">Protecting the Flowers</a></h3>
 
 <h2 id="code">code:</h2>
 
@@ -179,76 +179,46 @@
 38
 39
 40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56</pre></td><td class="code"><pre><span class="cp">#include &lt;iostream&gt;
-#include &lt;algorithm&gt;
+41</pre></td><td class="code"><pre><span class="cp">#include &lt;iostream&gt;
 #include &lt;cmath&gt;
-#include &lt;vector&gt;
-#include &lt;utility&gt;
-#include &lt;functional&gt;
 #include &lt;cstring&gt;
-#define MP make_pair
-#define PB push_back
+#include &lt;utility&gt;
+#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;set&gt;
+#include &lt;queue&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
 #define X first
 #define Y second
+#define PB push_back
+#define MP make_pair
+#define MXN (1000005)
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">PDI</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">PDI</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">PDII</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="n">ll</span><span class="o">&gt;</span> <span class="n">pii</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">pii</span><span class="o">&gt;</span> <span class="n">vii</span><span class="p">;</span>
+<span class="n">ll</span> <span class="n">T</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">ans</span><span class="p">,</span><span class="n">cnt</span><span class="p">;</span>
 
-<span class="kt">int</span> <span class="n">N</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">fail</span><span class="p">,</span> <span class="n">I</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
-<span class="kt">bool</span> <span class="n">in</span><span class="p">[</span><span class="mi">3000</span><span class="p">];</span>
-<span class="n">vector</span><span class="o">&lt;</span><span class="n">PDII</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span> <span class="c1">//((x, LorR), index)
-</span>
-<span class="kt">void</span> <span class="n">init</span><span class="p">(){</span>
-  <span class="n">fail</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="n">vec</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
-  <span class="n">memset</span><span class="p">(</span><span class="n">in</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">in</span><span class="p">));</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="n">sol</span><span class="p">(){</span>
-  <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-  <span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">less</span><span class="o">&lt;</span><span class="n">PDII</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">);</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">X</span><span class="p">.</span><span class="n">Y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1">//L
-</span>      <span class="n">in</span><span class="p">[</span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">in</span><span class="p">[</span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">]){</span>
-      <span class="n">ans</span><span class="o">++</span><span class="p">;</span>
-      <span class="n">memset</span><span class="p">(</span><span class="n">in</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">in</span><span class="p">));</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="n">pii</span><span class="o">&gt;</span> <span class="n">cow</span><span class="p">[</span><span class="n">MXN</span><span class="p">];</span>
 
 <span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
-  <span class="k">while</span><span class="p">(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">N</span><span class="o">&gt;&gt;</span><span class="n">M</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="n">M</span><span class="p">)){</span>
-    <span class="n">I</span><span class="o">++</span><span class="p">;</span>
-    <span class="n">init</span><span class="p">();</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-      <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="o">&gt;&gt;</span><span class="n">b</span><span class="p">;</span>
-      <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&gt;</span><span class="n">M</span><span class="p">)</span><span class="n">fail</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-      <span class="k">else</span><span class="p">{</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="kt">double</span><span class="p">(</span><span class="n">M</span><span class="o">*</span><span class="n">M</span> <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">));</span>
-        <span class="n">vec</span><span class="p">.</span><span class="n">PB</span><span class="p">(</span><span class="n">MP</span><span class="p">(</span><span class="n">MP</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">i</span><span class="p">));</span>
-        <span class="n">vec</span><span class="p">.</span><span class="n">PB</span><span class="p">(</span><span class="n">MP</span><span class="p">(</span><span class="n">MP</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">i</span><span class="p">));</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">"Case %d: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="p">(</span><span class="n">fail</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="n">sol</span><span class="p">())</span> <span class="p">);</span>
+  <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+  <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">N</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">cow</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">.</span><span class="n">X</span> <span class="o">&gt;&gt;</span> <span class="n">cow</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">.</span><span class="n">Y</span><span class="p">;</span>
+    <span class="n">cow</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">X</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">cow</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">.</span><span class="n">X</span><span class="o">/</span><span class="n">cow</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">.</span><span class="n">Y</span><span class="p">;</span>
   <span class="p">}</span>
+  <span class="n">sort</span><span class="p">(</span><span class="n">cow</span><span class="p">,</span> <span class="n">cow</span><span class="o">+</span><span class="n">N</span><span class="p">);</span>
+  <span class="n">cnt</span> <span class="o">=</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">ans</span> <span class="o">+=</span> <span class="p">(</span><span class="n">cnt</span><span class="o">*</span><span class="n">cow</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">.</span><span class="n">Y</span><span class="p">);</span>
+    <span class="n">cnt</span> <span class="o">+=</span> <span class="p">(</span><span class="n">cow</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">.</span><span class="n">X</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ans</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
@@ -283,10 +253,8 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Packets/" class="btn" title="poj-1017-Packets">Previous</a>
+        <a href="http://localhost:4000/pro-sol/Yogurt-factory/" class="btn" title="poj-2393-Yogurt factory">Previous</a>
       
-      
-        <a href="http://localhost:4000/pro-sol/Red-and-Black/" class="btn" title="poj-1979-Red and Black">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
