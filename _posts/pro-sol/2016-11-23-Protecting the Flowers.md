@@ -3,7 +3,7 @@ layout: post
 title: poj-3262-Protecting the Flowers
 categories: pro-sol
 excerpt: "greedy"
-tag: [greedy]
+tag: [poj, greedy]
 
 ---
 
