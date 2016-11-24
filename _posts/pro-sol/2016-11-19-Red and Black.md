@@ -9,7 +9,6 @@ tag: [dfs]
 
 ### [Red and Black](http://poj.org/problem?id=1979)
 
-##### dfs解
 {% highlight cpp linenos %}
 
 #include <iostream>

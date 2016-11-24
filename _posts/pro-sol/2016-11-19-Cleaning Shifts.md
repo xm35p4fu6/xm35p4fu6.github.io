@@ -7,11 +7,11 @@ tag: [greedy]
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Cleaning Shifts](http://poj.org/problem?id=2376)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

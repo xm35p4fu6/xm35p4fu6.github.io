@@ -6,11 +6,11 @@ excerpt: "search"
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Hopscotch](http://poj.org/problem?id=3050)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

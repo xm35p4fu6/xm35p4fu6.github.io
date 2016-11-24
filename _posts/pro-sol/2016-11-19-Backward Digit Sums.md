@@ -6,11 +6,11 @@ excerpt: "search"
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Backward Digit Sums](http://poj.org/problem?id=3187)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

@@ -7,11 +7,11 @@ tag: [bfs]
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Meteor Shower](http://poj.org/problem?id=3669)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

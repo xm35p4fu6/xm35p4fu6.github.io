@@ -7,11 +7,11 @@ tag: [greedy]
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Stall Reservations](http://poj.org/problem?id=3190)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>poj-2393-Yogurt factory &#8211; xm3の倉庫</title>
-<meta name="description" content="greedy">
-<meta name="keywords" content="greedy">
+<title>poj-3280-Cheapest Palindrome &#8211; xm3の倉庫</title>
+<meta name="description" content="dp">
+<meta name="keywords" content="poj, dp">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="poj-2393-Yogurt factory">
-<meta name="twitter:description" content="greedy">
+<meta name="twitter:title" content="poj-3280-Cheapest Palindrome">
+<meta name="twitter:description" content="dp">
 
 
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj-2393-Yogurt factory">
-<meta property="og:description" content="greedy">
-<meta property="og:url" content="http://localhost:4000/pro-sol/Yogurt-factory/">
+<meta property="og:title" content="poj-3280-Cheapest Palindrome">
+<meta property="og:description" content="dp">
+<meta property="og:url" content="http://localhost:4000/pro-sol/Cheapest-Palindrome/">
 <meta property="og:site_name" content="xm3の倉庫">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/pro-sol/Yogurt-factory/">
+<link rel="canonical" href="http://localhost:4000/pro-sol/Cheapest-Palindrome/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -114,10 +114,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://localhost:4000/tags/#greedy" title="Pages tagged greedy">greedy</a></li>
+          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#dp" title="Pages tagged dp">dp</a></li>
         </ul>
         
-          <h1 class="entry-title">poj-2393-Yogurt factory</h1>
+          <h1 class="entry-title">poj-3280-Cheapest Palindrome</h1>
         
       </header>
       <footer class="entry-meta">
@@ -126,7 +126,7 @@
           <img src="http://localhost:4000/images/chi.png" class="bio-photo" alt="呂振麒 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
-        <span class="entry-date date published"><time datetime="2016-11-19T00:00:00+08:00"><i class="fa fa-calendar-o"></i> November 19, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-11-23T00:00:00+08:00"><i class="fa fa-calendar-o"></i> November 23, 2016</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
@@ -135,7 +135,34 @@
       <div class="entry-content">
         <h2 id="section">傳送門</h2>
 
-<h4 id="yogurt-factoryhttppojorgproblemid2393"><a href="http://poj.org/problem?id=2393">Yogurt factory</a></h4>
+<h4 id="cheapest-palindromehttppojorgproblemid3280"><a href="http://poj.org/problem?id=3280">Cheapest Palindrome</a></h4>
+
+<h2 id="section-1">題意</h2>
+<p>給一字串，求轉成迴文的最小花費 (新增、刪除字元皆有花費)</p>
+
+<h2 id="section-2">思路</h2>
+<p>首先簡化一下問題：<br />
+透過觀察發現，需要新增字元時也可以選擇把該字元移除，於是稱新增或刪除一個字元為<strong><em>操作一個字元</em></strong>，所需的花費為 <strong><em>min(新增該字元, 刪除該字元)</em></strong></p>
+
+<p>令 dp[x][y] ： 區間 <strong><em>[x, y)</em></strong> 轉成迴文的最小花費<br />
+初始： 所有長度1或0的區間已經是迴文，為0<br />
+接著我們思考如何透過已是迴文的部分來組出更長的迴文，或說<br />
+某區間如何透過已經做好的部分來完成<br />
+結果如下：</p>
+
+<p>每個區間[x, y)我們可以選擇<br />
+操作最左(x)或最右(y-1)邊的字元來使此區間成為迴文：</p>
+<ul>
+  <li><strong><em>dp[x][y] = dp[x+1][y] + cost(str[x])</em></strong></li>
+  <li><strong><em>dp[x][y] = dp[x][y-1] + cost(str[y-1])</em></strong></li>
+</ul>
+
+<p>如果該區間最左與最右邊的字元相同：</p>
+<ul>
+  <li><strong><em>dp[x][y] = dp[x+1][y-1]</em></strong></li>
+</ul>
+
+<h5 id="dp">需依區間長度由小到大建dp表!</h5>
 
 <h2 id="code">code</h2>
 
@@ -152,19 +179,37 @@
 11
 12
 13
-14</pre></td><td class="code"><pre><span class="cp">#include &lt;iostream&gt;
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></td><td class="code"><pre><span class="cp">#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">N</span><span class="p">,</span><span class="n">M</span><span class="p">,</span> <span class="n">mn</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
-<span class="kt">long</span> <span class="kt">long</span> <span class="n">cnt</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">T</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">K</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">ans</span><span class="p">,</span><span class="n">cnt</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">a</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">cost</span><span class="p">[</span><span class="mi">200</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="mi">2002</span><span class="p">][</span><span class="mi">2002</span><span class="p">];</span>
+<span class="n">string</span> <span class="n">str</span><span class="p">;</span>
+
 <span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">M</span><span class="p">);</span>
-  <span class="n">mn</span> <span class="o">=</span> <span class="mi">9999</span><span class="p">;</span>
+  <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">N</span><span class="o">&gt;&gt;</span><span class="n">M</span><span class="o">&gt;&gt;</span><span class="n">str</span><span class="p">;</span>
   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
-    <span class="n">mn</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">mn</span> <span class="o">+</span> <span class="n">M</span><span class="p">)</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">mn</span><span class="o">+</span><span class="n">M</span><span class="p">;</span>
-    <span class="n">cnt</span><span class="o">+=</span><span class="p">(</span><span class="n">mn</span><span class="o">*</span><span class="n">b</span><span class="p">);</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="o">&gt;&gt;</span><span class="n">b</span><span class="o">&gt;&gt;</span><span class="n">c</span><span class="p">;</span>
+    <span class="n">cost</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
   <span class="p">}</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">"%lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">cnt</span><span class="p">);</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span> <span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">M</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">M</span> <span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span><span class="p">[</span><span class="n">str</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span><span class="p">[</span><span class="n">str</span><span class="p">[</span><span class="n">j</span><span class="p">]]);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">str</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+      <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+  <span class="p">}</span>
+  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">M</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
@@ -199,10 +244,10 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Stripies/" class="btn" title="poj-1862-Stripies">Previous</a>
+        <a href="http://localhost:4000/pro-sol/Apple-Catching/" class="btn" title="poj-2385-Apple Catching">Previous</a>
       
       
-        <a href="http://localhost:4000/pro-sol/Apple-Catching/" class="btn" title="poj-2385-Apple Catching">Next</a>
+        <a href="http://localhost:4000/pro-sol/Cow-Bowlong/" class="btn" title="poj-3176-Cow Bowlong">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

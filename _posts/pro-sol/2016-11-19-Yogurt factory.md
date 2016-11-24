@@ -7,11 +7,11 @@ tag: [greedy]
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Yogurt factory](http://poj.org/problem?id=2393)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

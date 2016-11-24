@@ -7,11 +7,11 @@ tag: [greedy]
 
 ---
 
-## 傳送門：
+## 傳送門
 
 ### [Protecting the Flowers](http://poj.org/problem?id=3262)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

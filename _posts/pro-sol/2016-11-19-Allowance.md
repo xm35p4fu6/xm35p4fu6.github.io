@@ -7,13 +7,13 @@ tag: [greedy]
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Allowance](http://poj.org/problem?id=3040)
 
 這題蠻有趣的，有空補個思路
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

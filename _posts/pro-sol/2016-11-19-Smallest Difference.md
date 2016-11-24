@@ -6,11 +6,11 @@ excerpt: "search"
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Smallest Difference](http://poj.org/problem?id=2718)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

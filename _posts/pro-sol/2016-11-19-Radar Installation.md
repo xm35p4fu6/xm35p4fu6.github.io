@@ -7,11 +7,11 @@ tag: [greedy]
 
 ---
 
-## 傳送門：
+## 傳送門
 
 #### [Radar Installation](http://poj.org/problem?id=1328)
 
-## code:
+## code
 
 {% highlight cpp linenos %}
 

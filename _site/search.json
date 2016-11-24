@@ -2,9 +2,49 @@
 
   
     {
+      "title"			: "poj-2229-Sumsets",
+      "link"			: "http://localhost:4000/pro-sol/Sumsets/",
+      "excerpt"		: "dp"
+    }
+  
+
+  
+    ,{
       "title"			: "poj-3262-Protecting the Flowers",
       "link"			: "http://localhost:4000/pro-sol/Protecting-the-Flowers/",
       "excerpt"		: "greedy"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3616-Milking Time",
+      "link"			: "http://localhost:4000/pro-sol/Milking-Time/",
+      "excerpt"		: "dp"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3176-Cow Bowlong",
+      "link"			: "http://localhost:4000/pro-sol/Cow-Bowlong/",
+      "excerpt"		: "dp"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3280-Cheapest Palindrome",
+      "link"			: "http://localhost:4000/pro-sol/Cheapest-Palindrome/",
+      "excerpt"		: "dp"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-2385-Apple Catching",
+      "link"			: "http://localhost:4000/pro-sol/Apple-Catching/",
+      "excerpt"		: "dp"
     }
   
 
