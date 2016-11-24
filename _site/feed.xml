@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-11-24T19:17:34+08:00</updated><id>http://localhost:4000//</id><title type="html">xm3の倉庫</title><entry><title type="html">poj-2229-Sumsets</title><link href="http://localhost:4000/pro-sol/Sumsets/" rel="alternate" type="text/html" title="poj-2229-Sumsets" /><published>2016-11-23T00:00:00+08:00</published><updated>2016-11-23T00:00:00+08:00</updated><id>http://localhost:4000/pro-sol/Sumsets</id><content type="html" xml:base="http://localhost:4000/pro-sol/Sumsets/">&lt;h2 id=&quot;section&quot;&gt;傳送門&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-11-24T19:20:47+08:00</updated><id>http://localhost:4000//</id><title type="html">xm3の倉庫</title><entry><title type="html">poj-2229-Sumsets</title><link href="http://localhost:4000/pro-sol/Sumsets/" rel="alternate" type="text/html" title="poj-2229-Sumsets" /><published>2016-11-23T00:00:00+08:00</published><updated>2016-11-23T00:00:00+08:00</updated><id>http://localhost:4000/pro-sol/Sumsets</id><content type="html" xml:base="http://localhost:4000/pro-sol/Sumsets/">&lt;h2 id=&quot;section&quot;&gt;傳送門&lt;/h2&gt;
 
 &lt;h4 id=&quot;sumsetshttppojorgproblemid2229&quot;&gt;&lt;a href=&quot;http://poj.org/problem?id=2229&quot;&gt;Sumsets&lt;/a&gt;&lt;/h4&gt;
 
@@ -329,12 +329,16 @@ dp[i][j]：到此點時的最高分&lt;br /&gt;
 &lt;p&gt;每個區間[x, y)我們可以選擇&lt;br /&gt;
 操作最左(x)或最右(y-1)邊的字元來使此區間成為迴文：&lt;/p&gt;
 
-&lt;p&gt;-&lt;strong&gt;&lt;em&gt;dp[x][y] = dp[x+1][y] + cost(str[x])&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
-  -&lt;strong&gt;&lt;em&gt;dp[x][y] = dp[x][y-1] + cost(str[y-1])&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;dp[x][y] = dp[x+1][y] + cost(str[x])&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;dp[x][y] = dp[x][y-1] + cost(str[y-1])&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;如果該區間最左與最右邊的字元相同：&lt;/p&gt;
 
-&lt;p&gt;-&lt;strong&gt;&lt;em&gt;dp[x][y] = dp[x+1][y-1]&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;dp[x][y] = dp[x+1][y-1]&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h5 id=&quot;dp&quot;&gt;需依區間長度由小到大建dp表!&lt;/h5&gt;
 
@@ -397,8 +401,10 @@ dp[i][j]：到此點時的最高分&lt;br /&gt;
 &lt;p&gt;dp[x][y] 表示目前在第x棵樹且已經移動y次最多接到幾次&lt;br /&gt;
 初始值：&lt;/p&gt;
 
-&lt;p&gt;*dp[0][0] = 0&lt;br /&gt;
-*dp[1][0] = -10 (使最佳狀態不成立於起始在第2棵樹)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;dp[0][0] = 0&lt;/li&gt;
+  &lt;li&gt;dp[1][0] = -10 (使最佳狀態不成立於起始在第2棵樹)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;code&quot;&gt;code&lt;/h2&gt;
 

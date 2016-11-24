@@ -153,12 +153,16 @@
 <p>每個區間[x, y)我們可以選擇<br />
 操作最左(x)或最右(y-1)邊的字元來使此區間成為迴文：</p>
 
-<p>-<strong><em>dp[x][y] = dp[x+1][y] + cost(str[x])</em></strong><br />
-  -<strong><em>dp[x][y] = dp[x][y-1] + cost(str[y-1])</em></strong></p>
+<ul>
+  <li><strong><em>dp[x][y] = dp[x+1][y] + cost(str[x])</em></strong></li>
+  <li><strong><em>dp[x][y] = dp[x][y-1] + cost(str[y-1])</em></strong></li>
+</ul>
 
 <p>如果該區間最左與最右邊的字元相同：</p>
 
-<p>-<strong><em>dp[x][y] = dp[x+1][y-1]</em></strong></p>
+<ul>
+  <li><strong><em>dp[x][y] = dp[x+1][y-1]</em></strong></li>
+</ul>
 
 <h5 id="dp">需依區間長度由小到大建dp表!</h5>
 
