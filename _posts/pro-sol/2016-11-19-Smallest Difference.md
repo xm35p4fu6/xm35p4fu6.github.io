@@ -3,6 +3,7 @@ layout: post
 title: poj-2718-Smallest Difference
 categories: pro-sol
 excerpt: "search"
+tag: [poj]
 
 ---
 

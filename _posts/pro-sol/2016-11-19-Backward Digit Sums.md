@@ -3,6 +3,7 @@ layout: post
 title: poj-3187-Backward Digit Sums
 categories: pro-sol
 excerpt: "search"
+tag: [poj]
 
 ---
 

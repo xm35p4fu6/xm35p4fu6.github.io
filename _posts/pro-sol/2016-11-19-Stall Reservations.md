@@ -3,7 +3,7 @@ layout: post
 title: poj-3190-Stall Reservations
 categories: pro-sol
 excerpt: "greedy"
-tag: [greedy]
+tag: [poj, greedy]
 
 ---
 

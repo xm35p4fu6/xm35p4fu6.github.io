@@ -3,7 +3,7 @@ layout: post
 title: poj-2393-Yogurt factory
 categories: pro-sol
 excerpt: "greedy"
-tag: [greedy]
+tag: [poj, greedy]
 
 ---
 

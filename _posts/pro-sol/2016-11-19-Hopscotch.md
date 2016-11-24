@@ -3,6 +3,7 @@ layout: post
 title: poj-3050-Hopscotch
 categories: pro-sol
 excerpt: "search"
+tag: [poj]
 
 ---
 

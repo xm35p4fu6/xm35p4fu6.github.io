@@ -3,7 +3,7 @@ layout: post
 title: poj-3040-Allowance
 excerpt: "greedy"
 categories: pro-sol
-tag: [greedy]
+tag: [poj, greedy]
 
 ---
 

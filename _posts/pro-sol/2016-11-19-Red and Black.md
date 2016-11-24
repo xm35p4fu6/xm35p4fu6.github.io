@@ -3,7 +3,7 @@ layout: post
 title: poj-1979-Red and Black
 categories: pro-sol
 excerpt: "dfs"
-tag: [dfs]
+tag: [poj, dfs]
 
 ---
 

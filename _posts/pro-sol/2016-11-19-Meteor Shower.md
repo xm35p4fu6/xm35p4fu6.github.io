@@ -3,7 +3,7 @@ layout: post
 title: poj-3669-Meteor Shower
 categories: pro-sol
 excerpt: "bfs"
-tag: [bfs]
+tag: [poj, bfs]
 
 ---
 
