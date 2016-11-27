@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>poj-2393-Yogurt factory &#8211; xm3の倉庫</title>
-<meta name="description" content="greedy">
-<meta name="keywords" content="poj, greedy">
+<title>Problemset &#8211; xm3の倉庫</title>
+<meta name="description" content="大腦書題單">
+<meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="poj-2393-Yogurt factory">
-<meta name="twitter:description" content="greedy">
+<meta name="twitter:title" content="Problemset">
+<meta name="twitter:description" content="大腦書題單">
 
 
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj-2393-Yogurt factory">
-<meta property="og:description" content="greedy">
-<meta property="og:url" content="http://localhost:4000/pro-sol/Yogurt-factory/">
+<meta property="og:title" content="Problemset">
+<meta property="og:description" content="大腦書題單">
+<meta property="og:url" content="http://localhost:4000/articles/poj-problemset/">
 <meta property="og:site_name" content="xm3の倉庫">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/pro-sol/Yogurt-factory/">
+<link rel="canonical" href="http://localhost:4000/articles/poj-problemset/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -114,10 +114,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#greedy" title="Pages tagged greedy">greedy</a></li>
+          
         </ul>
         
-          <h1 class="entry-title">poj-2393-Yogurt factory</h1>
+          <h1 class="entry-title">Problemset</h1>
         
       </header>
       <footer class="entry-meta">
@@ -126,47 +126,97 @@
           <img src="http://localhost:4000/images/chi.png" class="bio-photo" alt="呂振麒 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
-        <span class="entry-date date published"><time datetime="2016-11-19T00:00:00+08:00"><i class="fa fa-calendar-o"></i> November 19, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-11-27T00:00:00+08:00"><i class="fa fa-calendar-o"></i> November 27, 2016</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
         
       </footer>
       <div class="entry-content">
-        <h2 id="section">傳送門</h2>
+        <p>本POJ題單出處為 <strong><em>“培養與鍛鍊 程式設計的邏輯腦 第二版”</em></strong></p>
 
-<h4 id="yogurt-factoryhttppojorgproblemid2393"><a href="http://poj.org/problem?id=2393">Yogurt factory</a></h4>
+<h2 id="section">搜尋</h2>
 
-<h2 id="code">code</h2>
+<h3 id="section-1">深度優先搜尋</h3>
 
-<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14</pre></td><td class="code"><pre><span class="cp">#include &lt;iostream&gt;
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">N</span><span class="p">,</span><span class="n">M</span><span class="p">,</span> <span class="n">mn</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
-<span class="kt">long</span> <span class="kt">long</span> <span class="n">cnt</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">M</span><span class="p">);</span>
-  <span class="n">mn</span> <span class="o">=</span> <span class="mi">9999</span><span class="p">;</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
-    <span class="n">mn</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">mn</span> <span class="o">+</span> <span class="n">M</span><span class="p">)</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">mn</span><span class="o">+</span><span class="n">M</span><span class="p">;</span>
-    <span class="n">cnt</span><span class="o">+=</span><span class="p">(</span><span class="n">mn</span><span class="o">*</span><span class="n">b</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">"%lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">cnt</span><span class="p">);</span>
-<span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<p><a href="http://poj.org/problem?id=1979">POJ 1979 : Red and Black</a><br />
+<a href="http://poj.org/problem?id=3009">POJ 3009 : Curing 2.0</a></p>
+
+<h3 id="section-2">廣度優先搜尋</h3>
+
+<p><a href="http://poj.org/problem?id=3669">POJ 3669 : Meteor Shower</a></p>
+
+<h3 id="section-3">完全列舉</h3>
+
+<p><a href="http://poj.org/problem?id=2718">POJ 2718 : Smallest Difference</a><br />
+<a href="http://poj.org/problem?id=3187">POJ 3187 : Backward Digit Sums</a><br />
+<a href="http://poj.org/problem?id=3050">POJ 3050 : Hopscotch</a></p>
+
+<h2 id="section-4">貪心</h2>
+
+<h3 id="section-5">區間</h3>
+
+<p><a href="http://poj.org/problem?id=2376">POJ 2376 : Cleaning Shifts</a><br />
+<a href="http://poj.org/problem?id=1328">POJ 1328 : Radar Installation</a><br />
+<a href="http://poj.org/problem?id=3190">POJ 3190 : Stall Reservations</a></p>
+
+<h3 id="section-6">其他</h3>
+
+<p><a href="http://poj.org/problem?id=2393">POJ 2393 : Yogurt factory</a><br />
+<a href="http://poj.org/problem?id=1017">POJ 1017 : Packets</a><br />
+<a href="http://poj.org/problem?id=3040">POJ 3040 : Allowance</a><br />
+<a href="http://poj.org/problem?id=1862">POJ 1862 : Stripies</a><br />
+<a href="http://poj.org/problem?id=3262">POJ 3262 : Protecting the Flowers</a></p>
+
+<h2 id="section-7">ＤＰ</h2>
+
+<h3 id="section-8">基礎ＤＰ</h3>
+<p><a href="http://poj.org/problem?id=3176">POJ 3176 : Cow Bowlong</a><br />
+<a href="http://poj.org/problem?id=2229">POJ 2229 : Sumsets</a><br />
+<a href="http://poj.org/problem?id=2385">POJ 2385 : Apple Catching</a><br />
+<a href="http://poj.org/problem?id=3616">POJ 3616 : Mklking Time</a><br />
+<a href="http://poj.org/problem?id=3280">POJ 3280 : Cheapest Palindrome</a></p>
+
+<h3 id="section-9">漸進式優化ＤＰ</h3>
+
+<p><a href="http://poj.org/problem?id=1742">POJ 1742 : Coins</a><br />
+<a href="http://poj.org/problem?id=3046">POJ 3046 : Ant Counting</a><br />
+<a href="http://poj.org/problem?id=3181">POJ 3181 : Dollar Dayz</a></p>
+
+<h3 id="section-10">進階ＤＰ</h3>
+
+<p><a href="http://poj.org/problem?id=1065">POJ 1065 : Wooden Sticks</a><br />
+<a href="http://poj.org/problem?id=1631">POJ 1631 : Bridging signals</a><br />
+<a href="http://poj.org/problem?id=3666">POJ 3666 : Making the Grade</a><br />
+<a href="http://poj.org/problem?id=2392">POJ 2392 : Space Elevator</a><br />
+<a href="http://poj.org/problem?id=2184">POJ 2184 : Cow Exhibition</a></p>
+
+<h2 id="priority-queue">Priority Queue</h2>
+
+<p><a href="http://poj.org/problem?id=3614">POJ 3614 : Sunscreen</a><br />
+<a href="http://poj.org/problem?id=2010">POJ 2010 : Moo University - Financial Aid</a></p>
+
+<h2 id="union-find-tree">Union-Find Tree</h2>
+
+<p><a href="http://poj.org/problem?id=2236">POJ 2236 : Wireless Network</a><br />
+<a href="http://poj.org/problem?id=1703">POJ 1703 : Find them, Catch them</a></p>
+
+<h2 id="section-11">最短路徑</h2>
+
+<p><a href="http://poj.org/problem?id=2139">POJ 2139 : Six Degrees of Cowvin Bacon</a><br />
+<a href="http://poj.org/problem?id=3259">POJ 3259 : Wormholes</a><br />
+<a href="http://poj.org/problem?id=3268">POJ 3268 : Silver Cow Party</a></p>
+
+<h2 id="section-12">ＭＳＴ</h2>
+
+<p><a href="http://poj.org/problem?id=1258">POJ 1258 : Agri-Net</a><br />
+<a href="http://poj.org/problem?id=2377">POJ 2377 : Bad Cowtractors</a><br />
+<a href="http://poj.org/problem?id=2395">POJ 2395 : Out of Hay</a></p>
+
+<h2 id="section-13">輾轉相除法</h2>
+
+<p><a href="http://poj.org/problem?id=2429">POJ 2429 : GCD &amp; LCM Inverse</a><br />
+<a href="http://poj.org/problem?id=1930">POJ 1930 : Dead Fraction</a></p>
 
 
         
@@ -199,10 +249,10 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Stripies/" class="btn" title="poj-1862-Stripies">Previous</a>
+        <a href="http://localhost:4000/pro-sol/Sumsets/" class="btn" title="poj-2229-Sumsets">Previous</a>
       
       
-        <a href="http://localhost:4000/pro-sol/Apple-Catching/" class="btn" title="poj-2385-Apple Catching">Next</a>
+        <a href="http://localhost:4000/pro-sol/Atlantis/" class="btn" title="poj-1151-Atlantis">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

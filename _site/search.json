@@ -2,6 +2,22 @@
 
   
     {
+      "title"			: "poj-1151-Atlantis",
+      "link"			: "http://localhost:4000/pro-sol/Atlantis/",
+      "excerpt"		: "矩形覆蓋面積"
+    }
+  
+
+  
+    ,{
+      "title"			: "Problemset",
+      "link"			: "http://localhost:4000/articles/poj-problemset/",
+      "excerpt"		: "大腦書題單"
+    }
+  
+
+  
+    ,{
       "title"			: "poj-2229-Sumsets",
       "link"			: "http://localhost:4000/pro-sol/Sumsets/",
       "excerpt"		: "dp"
