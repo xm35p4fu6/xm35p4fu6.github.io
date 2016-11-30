@@ -143,12 +143,14 @@
 
 <h2 id="section-2">思路：</h2>
 
+<p>另解： <strong><a href="../Atlantis-Qtree/">四分樹</a></strong></p>
+
 <p>經典的題目，在座標範圍足夠小時我們可以直接畫出矩形並計算，這題顯然無法，就跳過囉</p>
 
 <h5 id="section-3">掃描線＋線段樹＋離散化</h5>
 
-<p>想像有一條直線，由左向右掃過去，此時每個矩形就被兩個鉛直線段所代替<br />
-  分別代表<em>矩形開始/結束</em>，把矩形視為一個區間，於是我們丟進去線段樹維護，又因為座標值可能很醜<br />
+<p>想像有一條直線，由左向右掃過去，此時每個矩形就被兩個線段所代替<br />
+  分別代表<em>矩形開始/結束</em>，把線段視為一個區間，於是我們丟進去線段樹維護，又因為座標值可能很醜<br />
   所以要丟進segment tree前先離散化，之後邊丟線段進去邊把答案組起來即可<br />
   大致上這樣，以下是具體步驟</p>
 
@@ -305,17 +307,17 @@
     <span class="n">N</span> <span class="o">&lt;&lt;=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="n">sort</span><span class="p">(</span><span class="n">seg</span><span class="p">,</span> <span class="n">seg</span><span class="o">+</span><span class="n">N</span><span class="p">);</span> <span class="c1">//線段排序
 </span>    
-    <span class="cm">/*離散化開始*/</span>
+    <span class="cm">/*對y離散化開始*/</span>
     <span class="n">sort</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">N</span><span class="p">);</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
       <span class="n">y</span><span class="p">[</span><span class="n">dN</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="c1">//unique (去除重複)
 </span>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">dN</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
       <span class="n">lu</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>   <span class="c1">//速查表
 </span>    <span class="cm">/*離散化結束*/</span>
 
     <span class="n">_x</span> <span class="o">=</span> <span class="n">seg</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">pos</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-      <span class="n">ans</span> <span class="o">+=</span> <span class="p">((</span><span class="n">seg</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">pos</span> <span class="o">-</span> <span class="n">_x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">cnt</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>  <span class="c1">//目前的線段長度 * x變化
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>   <span class="c1">//掃描x軸 (依x枚舉各線段)
+</span>      <span class="n">ans</span> <span class="o">+=</span> <span class="p">((</span><span class="n">seg</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">pos</span> <span class="o">-</span> <span class="n">_x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">cnt</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>  <span class="c1">//目前的線段長度 * x變化
 </span>      <span class="n">update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dN</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">lu</span><span class="p">[</span><span class="n">seg</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">d</span><span class="p">],</span> <span class="n">lu</span><span class="p">[</span><span class="n">seg</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">u</span><span class="p">],</span> <span class="p">(</span><span class="n">seg</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">s</span><span class="p">)</span><span class="o">?</span><span class="mi">1</span><span class="o">:-</span><span class="mi">1</span><span class="p">);</span>  <span class="c1">// 丟下個線段進去
 </span>      <span class="n">_x</span> <span class="o">=</span> <span class="n">seg</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">pos</span><span class="p">;</span>
     <span class="p">}</span>
@@ -357,6 +359,8 @@
       
         <a href="http://localhost:4000/articles/poj-problemset/" class="btn" title="Problemset">Previous</a>
       
+      
+        <a href="http://localhost:4000/pro-sol/Atlantis-qtree/" class="btn" title="poj-1151-Atlantis Qtree">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
