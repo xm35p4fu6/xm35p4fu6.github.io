@@ -98,6 +98,4 @@ int main(){
   }
 }
 
-
-
 {% endhighlight %}
