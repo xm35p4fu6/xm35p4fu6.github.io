@@ -33,7 +33,6 @@ tag: [poj, priority_queue, prefix, postfix]
 其餘的需要判斷 cost[i] 有無小於 max(cost[1] ~ cost[i-1]) ， max 用 priority_queue(pq) 來維護。  
 
 1. cost[i] < pq.top() then pre[i] is pre[i-1]  
-
 + 這隻牛的花費 比 花費最小的那群牛中花費最大的那隻牛的花費還高（有點拗口，看不懂多看幾次想想唄） 
 + 所以這隻牛無法加入花費最小的那群牛。  
 
