@@ -2,8 +2,24 @@
 
   
     {
+      "title"			: "poj-3614-Sunscreen",
+      "link"			: "http://localhost:4000/pro-sol/Sunscreen/",
+      "excerpt"		: "greedy"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-2010-Moo University-Financial Aid",
+      "link"			: "http://localhost:4000/pro-sol/Moo-University-Financial-Aid/",
+      "excerpt"		: "priority_queue"
+    }
+  
+
+  
+    ,{
       "title"			: "poj-1151-Atlantis Qtree",
-      "link"			: "http://localhost:4000/pro-sol/Atlantis-qtree/",
+      "link"			: "http://localhost:4000/pro-sol/Atlantis-Qtree/",
       "excerpt"		: "矩形覆蓋面積"
     }
   
