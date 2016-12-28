@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2236_Wireless Network
+title: poj-2236-Wireless Network
 categories: pro-sol
 excerpt: "disjoint set, union find"
 tag: [poj, union-find]

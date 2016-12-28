@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find them, Catch them
+title: poj-1703-Find them, Catch them
 categories: pro-sol
 excerpt: "unioin find"
 tag: [poj, union-find]
