@@ -160,15 +160,15 @@
 
 <ol>
   <li>cost[i] &lt; pq.top() then pre[i] is pre[i-1]
-    <blockquote>
-      <p>這隻牛的花費 比 花費最小的那群牛中花費最大的那隻牛的花費還高（有點拗口，看不懂多看幾次想想唄） 
-所以這隻牛無法加入花費最小的那群牛。</p>
-    </blockquote>
+    <ul>
+      <li>這隻牛的花費 比 花費最小的那群牛中花費最大的那隻牛的花費還高（有點拗口，看不懂多看幾次想想唄）</li>
+      <li>所以這隻牛無法加入花費最小的那群牛。</li>
+    </ul>
   </li>
   <li>else then pre[i] is pre[i-1] - pq.top() + cost[i] , pq.pop(), pq.push(cost[i])
-    <blockquote>
-      <p>這隻牛可以加入花費最小的那群牛，把那群牛中花費最大的換成這隻牛</p>
-    </blockquote>
+    <ul>
+      <li>這隻牛可以加入花費最小的那群牛，把那群牛中花費最大的換成這隻牛</li>
+    </ul>
   </li>
 </ol>
 
