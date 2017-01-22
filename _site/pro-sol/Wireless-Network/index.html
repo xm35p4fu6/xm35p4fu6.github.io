@@ -5,13 +5,13 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>2236_Wireless Network &#8211; xm3の倉庫</title>
+<title>poj-2236-Wireless Network &#8211; xm3の倉庫</title>
 <meta name="description" content="disjoint set, union find">
 <meta name="keywords" content="poj, union-find">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="2236_Wireless Network">
+<meta name="twitter:title" content="poj-2236-Wireless Network">
 <meta name="twitter:description" content="disjoint set, union find">
 
 
@@ -22,7 +22,7 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2236_Wireless Network">
+<meta property="og:title" content="poj-2236-Wireless Network">
 <meta property="og:description" content="disjoint set, union find">
 <meta property="og:url" content="http://localhost:4000/pro-sol/Wireless-Network/">
 <meta property="og:site_name" content="xm3の倉庫">
@@ -117,7 +117,7 @@
           <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#union-find" title="Pages tagged union-find">union-find</a></li>
         </ul>
         
-          <h1 class="entry-title">2236_Wireless Network</h1>
+          <h1 class="entry-title">poj-2236-Wireless Network</h1>
         
       </header>
       <footer class="entry-meta">
@@ -136,6 +136,30 @@
         <h2 id="section">傳送門：</h2>
 
 <h4 id="wireless-networkhttppojorgproblemid2236"><a href="http://poj.org/problem?id=2236">Wireless Network</a></h4>
+
+<h2 id="section-1">題意：</h2>
+
+<p><strong><em>poj 2236</em></strong></p>
+
+<p>一場地震後導致電腦全壞了（有沒有這麼脆弱？？），現在給出兩種操作</p>
+
+<ol>
+  <li>修復第k個電腦</li>
+  <li>詢問某兩電腦是否能正常通訊</li>
+</ol>
+
+<p>給定每電腦的位置（Ｘ、Ｙ），只有被修復的電腦可以通訊，且需距離不大於ｄ或之間有另個電腦可通訊。</p>
+
+<p>1&lt;=Ｎ&lt;=1001、0&lt;=ｄ&lt;=20000、300000左右筆操作</p>
+
+<h2 id="section-2">思路：</h2>
+
+<p><strong>只要Ａ與Ｂ可通訊、Ｂ與Ｃ可通訊，則Ａ與Ｃ可通訊</strong><br />
+我們可以發現，若將兩個可通訊的電腦視為同一集合，則詢問是否正常通訊可視為詢問是否在同個集合，可用disjoint set輾壓。</p>
+
+<p>現在問題只剩下如何建立起集合了，觀察一下發現Ｎ量級是3個0，換句話說複雜度Ｎ平方的做法是可以接受的，自然而然的想到了對於每個維修電腦的操作，我們都直接枚舉所有電腦來判斷是否能通訊（能合併為一集合），到此，這題八九不離十就已經結束了。</p>
+
+<p>順帶一提，如果Ｎ的量級不支援到平方等級的複雜度，應該改用ＫＤ樹之類的資料結構來維護集合，目前還沒做到這類型題目～</p>
 
 <h2 id="code">code:</h2>
 
@@ -285,8 +309,10 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Find-them,-Catch-them/" class="btn" title="Find them, Catch them">Previous</a>
+        <a href="http://localhost:4000/pro-sol/Find-them,-Catch-them/" class="btn" title="poj-1703-Find them, Catch them">Previous</a>
       
+      
+        <a href="http://localhost:4000/pro-sol/PolandBall-and-Polygon/" class="btn" title="codeforces-755D-PolandBall and Polygon">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
@@ -296,7 +322,7 @@
   <footer role="contentinfo" class="entry-wrapper">
     
 
-<span>&copy; 2016 呂振麒. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<span>&copy; 2017 呂振麒. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
 <div class="social-icons">
 	
 	
