@@ -3,7 +3,7 @@ layout: post
 title: codeforces-755D-PolandBall and Polygon
 categories: pro-sol
 excerpt: "BIT"
-tag: [codeforces]
+tag: [codeforces, BIT]
 
 ---
 
