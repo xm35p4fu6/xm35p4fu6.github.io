@@ -18,6 +18,13 @@ tag: [spoj, string, sa]
 ## 思路：
 
 使用 suffix array + height array 求出。    
+    
+經過仔細觀察，可發現相異子字串的數量即為 suffix tree 上節點的數量，接著我們又發現 suffix tree
+上節點的數量即為每個suffix的長度扣除與上一個suffix的LCA。    
+
+suffix tree 上的 LCA 也就是 lcp(height) array，於是題目所求等同    
+    
+***子字串數量-LCP陣列的值***    
 
 ## code:
 
