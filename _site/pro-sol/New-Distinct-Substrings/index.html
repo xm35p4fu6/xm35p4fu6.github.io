@@ -123,7 +123,7 @@
       <footer class="entry-meta">
         
         
-          <img src="http://localhost:4000/images/chi.png" class="bio-photo" alt="呂振麒 bio photo"></a>
+          <img src="http://localhost:4000/images/site-logo.png" class="bio-photo" alt="呂振麒 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
         <span class="entry-date date published"><time datetime="2017-02-08T00:00:00+08:00"><i class="fa fa-calendar-o"></i> February 08, 2017</time></span>
@@ -144,6 +144,13 @@
 <h2 id="section-2">思路：</h2>
 
 <p>使用 suffix array + height array 求出。</p>
+
+<p>經過仔細觀察，可發現相異子字串的數量即為 suffix tree 上節點的數量，接著我們又發現 suffix tree
+上節點的數量即為每個suffix的長度扣除與上一個suffix的LCA。</p>
+
+<p>suffix tree 上的 LCA 也就是 lcp(height) array，於是題目所求等同</p>
+
+<p><strong><em>子字串數量-LCP陣列的值</em></strong></p>
 
 <h2 id="code">code:</h2>
 

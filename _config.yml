@@ -38,7 +38,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 # Site owner
 owner:
   name: 呂振麒
-  avatar: chi.png
+  avatar: site-logo.png
   email: xm35p4fu6@csie.io
   disqus-shortname: xm35p4fu6
   twitter: #username
