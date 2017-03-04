@@ -14,47 +14,47 @@ comments: true
 
 #### 深度優先搜尋
 
-[POJ 1979 : Red and Black](http://poj.org/problem?id=1979)  
-[POJ 3009 : Curing 2.0](http://poj.org/problem?id=3009)  
+[POJ 1979 : Red and Black](http://poj.org/problem?id=1979) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Red-and-Black/)  
+[POJ 3009 : Curing 2.0](http://poj.org/problem?id=3009) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Curing-2.0/)  
 
 #### 廣度優先搜尋
 
-[POJ 3669 : Meteor Shower](http://poj.org/problem?id=3669)  
+[POJ 3669 : Meteor Shower](http://poj.org/problem?id=3669) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Meteor-Shower/)  
 
 #### 完全列舉
 
-[POJ 2718 : Smallest Difference](http://poj.org/problem?id=2718)  
-[POJ 3187 : Backward Digit Sums](http://poj.org/problem?id=3187)  
-[POJ 3050 : Hopscotch](http://poj.org/problem?id=3050)  
+[POJ 2718 : Smallest Difference](http://poj.org/problem?id=2718) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Smallest-Difference/)  
+[POJ 3187 : Backward Digit Sums](http://poj.org/problem?id=3187) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Backward-Digit-Sums/)   
+[POJ 3050 : Hopscotch](http://poj.org/problem?id=3050) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Hopscotch/)  
 
 ## 貪心
 
 #### 區間
 
-[POJ 2376 : Cleaning Shifts](http://poj.org/problem?id=2376)  
-[POJ 1328 : Radar Installation](http://poj.org/problem?id=1328)  
-[POJ 3190 : Stall Reservations](http://poj.org/problem?id=3190)  
+[POJ 2376 : Cleaning Shifts](http://poj.org/problem?id=2376) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cleaning-Shifts/)  
+[POJ 1328 : Radar Installation](http://poj.org/problem?id=1328) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Radar-Installation/)  
+[POJ 3190 : Stall Reservations](http://poj.org/problem?id=3190) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Stall-Reservations/)  
 
 ####  其他
 
-[POJ 2393 : Yogurt factory](http://poj.org/problem?id=2393)  
-[POJ 1017 : Packets](http://poj.org/problem?id=1017)  
-[POJ 3040 : Allowance](http://poj.org/problem?id=3040)  
-[POJ 1862 : Stripies](http://poj.org/problem?id=1862)  
-[POJ 3262 : Protecting the Flowers](http://poj.org/problem?id=3262)  
+[POJ 2393 : Yogurt factory](http://poj.org/problem?id=2393) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Yogurt-factory/)  
+[POJ 1017 : Packets](http://poj.org/problem?id=1017) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Packets/)  
+[POJ 3040 : Allowance](http://poj.org/problem?id=3040) [<font color="green"><b>ċȯḋė</b></font>](/Allowance/)  
+[POJ 1862 : Stripies](http://poj.org/problem?id=1862) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Stripies/)  
+[POJ 3262 : Protecting the Flowers](http://poj.org/problem?id=3262) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Protecting-the-Flowers/)  
 
 ## ＤＰ
 
 #### 基礎ＤＰ
-[POJ 3176 : Cow Bowlong](http://poj.org/problem?id=3176)  
-[POJ 2229 : Sumsets](http://poj.org/problem?id=2229)  
-[POJ 2385 : Apple Catching](http://poj.org/problem?id=2385)  
-[POJ 3616 : Mklking Time](http://poj.org/problem?id=3616)  
-[POJ 3280 : Cheapest Palindrome](http://poj.org/problem?id=3280)  
+[POJ 3176 : Cow Bowlong](http://poj.org/problem?id=3176) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cow-Bowlong/)  
+[POJ 2229 : Sumsets](http://poj.org/problem?id=2229) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sumsets/)  
+[POJ 2385 : Apple Catching](http://poj.org/problem?id=2385) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Apple-Catching/)  
+[POJ 3616 : Mklking Time](http://poj.org/problem?id=3616) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Milking-Time/)  
+[POJ 3280 : Cheapest Palindrome](http://poj.org/problem?id=3280) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cheapest-Palindrome/)  
 
 #### 漸進式優化ＤＰ
 
-[POJ 1742 : Coins](http://poj.org/problem?id=1742)  
+[POJ 1742 : Coins](http://poj.org/problem?id=1742)   
 [POJ 3046 : Ant Counting](http://poj.org/problem?id=3046)  
 [POJ 3181 : Dollar Dayz](http://poj.org/problem?id=3181)  
 
@@ -69,25 +69,26 @@ comments: true
 
 ### Priority Queue
 
-[POJ 3614 : Sunscreen](http://poj.org/problem?id=3614)  
-[POJ 2010 : Moo University - Financial Aid](http://poj.org/problem?id=2010)  
+[POJ 3614 : Sunscreen](http://poj.org/problem?id=3614) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sunscreen/)  
+[POJ 2010 : Moo University - Financial Aid](http://poj.org/problem?id=2010) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Moo-University-Financial-Aid/)  
 
 ### Union-Find Tree
 
-[POJ 2236 : Wireless Network](http://poj.org/problem?id=2236)  
-[POJ 1703 : Find them, Catch them](http://poj.org/problem?id=1703)  
+[POJ 2236 : Wireless Network](http://poj.org/problem?id=2236) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Wireless-Network/)  
+[POJ 1703 : Find them, Catch them](http://poj.org/problem?id=1703) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Find-them,-Catch-them/)  
 
 ### 最短路徑
 
-[POJ 2139 : Six Degrees of Cowvin Bacon](http://poj.org/problem?id=2139)  
-[POJ 3259 : Wormholes](http://poj.org/problem?id=3259)  
-[POJ 3268 : Silver Cow Party](http://poj.org/problem?id=3268)  
+[POJ 2139 : Six Degrees of Cowvin Bacon](http://poj.org/problem?id=2139) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Six-Degrees-of-Cowvin-Bacon/)  
+[POJ 3259 : Wormholes](http://poj.org/problem?id=3259) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Wormholes/)  
+[POJ 3268 : Silver Cow Party](http://poj.org/problem?id=3268) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Silver-Cow-Party/)  
 
 ### ＭＳＴ
 
-[POJ 1258 : Agri-Net](http://poj.org/problem?id=1258)  
-[POJ 2377 : Bad Cowtractors](http://poj.org/problem?id=2377)  
-[POJ 2395 : Out of Hay](http://poj.org/problem?id=2395)  
+[POJ 1258 : Agri-Net](http://poj.org/problem?id=1258)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Agri-Net/)  
+[POJ 2377 : Bad Cowtractors](http://poj.org/problem?id=2377)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Bad-Cowtractors/)  
+[POJ 2395 : Out of Hay](http://poj.org/problem?id=2395)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Out-of-Hay/)   
+
 
 ### 輾轉相除法
 

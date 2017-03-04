@@ -1,0 +1,476 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>poset and Dilworth theorem &#8211; xm3の倉庫</title>
+<meta name="description" content="從 偏序集 介紹到Dilworth定理">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="poset and Dilworth theorem">
+<meta name="twitter:description" content="從 偏序集 介紹到Dilworth定理">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="poset and Dilworth theorem">
+<meta property="og:description" content="從 偏序集 介紹到Dilworth定理">
+<meta property="og:url" content="http://localhost:4000/articles/poset/">
+<meta property="og:site_name" content="xm3の倉庫">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="3Y2I2JKgMnXBa5y4r6TZEUdGEyzRPrkWMEX0WKNGquE">
+
+
+
+<link rel="canonical" href="http://localhost:4000/articles/poset/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="http://localhost:4000/articles/" >文章</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/pro-sol/" >解題記錄</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="xm3の倉庫"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="xm3の倉庫 logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">xm3の倉庫</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">xm3倉庫</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          
+        </ul>
+        
+          <h1 class="entry-title">poset and Dilworth theorem</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://localhost:4000/images/site-logo.png" class="bio-photo" alt="呂振麒 bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">呂振麒</span></span>
+        <span class="entry-date date published"><time datetime="2017-03-04T00:00:00+08:00"><i class="fa fa-calendar-o"></i> March 04, 2017</time></span>
+        <span class="entry-date date modified"><time datetime="2017-03-04"><i class="fa fa-pencil"></i> March 04, 2017</time></span>
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        
+        
+      </footer>
+      <div class="entry-content">
+        <p>關鍵字：   <br />
+Dilworth theorem / partially ordered set / non-strict partial order / 偏序 / 非嚴格偏序 / 自反偏序</p>
+
+<p>這篇文章是為了把之前做的筆記整理成電子版本，順便幫助自己之後複習，還請多多指教！</p>
+
+<p>研讀較抽象的算法或概念，最害怕不知道能幹嘛，所以我在開頭這邊先給出一個題目以及簡述，才開始介紹什麼是偏序關係、偏序集以及Dilworth theorem，最後，再使用該定理來解決開頭的問題，以及給出其他例題，以下正文開始。</p>
+
+<h5 id="httpnhspccsientnuedutw2016refexamphp">傳送門：<a href="http://nhspc.csie.ntnu.edu.tw/2016/ref_exam.php">105學年度資訊學科能力決賽第五題-直昇機抓寶</a></h5>
+
+<blockquote>
+  <p>題目簡述：</p>
+
+  <p>在N×N方格上，原點終點分別為最左下、右上角的方格，從原點開始只能往右或往上移動，在每個橫排皆有唯一連續區間，求原點移動到終點最多可通過幾個區間？</p>
+
+  <p><strong><em>N ≤ 800,000</em></strong> 看這Ｎ這麼大，N 平方掃過去的做法可以先收一收了。</p>
+  <div class="highlighter-rouge"><pre class="highlight"><code>input          output
+5              3
+2 2   
+1 1   
+0 0   
+2 2   
+4 4   
+</code></pre>
+  </div>
+</blockquote>
+
+<p>已經知道偏序關係的同學可以跳過 <strong><em>偏序</em></strong> 這節，想直接看詳解請用力下拉。</p>
+
+<h1 id="section">偏序</h1>
+
+<p>我們先假設Ａ是個集合（例：整數集合），定義一個二元關係Ｐ（例：≤，左右各需要一個運算元稱為二元），如果Ｐ滿足：</p>
+<ol>
+  <li>reflexivity (自反性)</li>
+  <li>antisymmetry (反對稱性）</li>
+  <li>transitivity（傳遞性）</li>
+</ol>
+
+<p><strong><em>則我們說，Ｐ為Ａ的一個偏序關係</em></strong>  <br />
+（本文的偏序，皆是非嚴格偏序、自反偏序）</p>
+
+<h4 id="reflexivity-">reflexivity 自反性</h4>
+<blockquote>
+  <p><strong><em>∀a ∈ A , （a,a） ∈ P</em></strong></p>
+</blockquote>
+
+<p>（a,a）∈ P 是指（a,a）滿足Ｐ關係。</p>
+
+<p>舉個例子：</p>
+<ol>
+  <li>Ａ是 整數集合</li>
+  <li>ａ是 整數集合中的任意一個元素，其實就是整數的意思啦</li>
+  <li>Ｐ是 小於等於關係 （≤）</li>
+</ol>
+
+<p>則（a,a）∈Ｐ，因為 ａ≤ａ 成立</p>
+
+<p>再舉個例子：</p>
+<ol>
+  <li>ａ是 正整數</li>
+  <li>Ｐ是 整除</li>
+</ol>
+
+<p>則（a,a）∈Ｐ，因為 ａ整除ａ 成立</p>
+
+<p>我們總結一下偏序關係中，自反性的意思如下：  <br />
+<em>若Ｐ為Ａ的一個偏序關係，則對於所有Ａ內的元素ａ，（a,a）都 <strong>必須</strong> 滿足Ｐ關係。</em></p>
+
+<p>補充：∀ 是指對於所有集合內的元素，英文為for all</p>
+
+<h4 id="antisymmetry-">antisymmetry 反對稱性</h4>
+<blockquote>
+  <p><strong><em>∀a ∈ A , ∀b ∈ A，if (a,b)∈P and (b,a)∈P，then a=b</em></strong></p>
+</blockquote>
+
+<p>（a,b）∈Ｐ內的ａ與ｂ不可對調，除非他們相等。</p>
+
+<p>繼續用剛剛的例子：</p>
+<ol>
+  <li>ａ,ｂ是 整數</li>
+  <li>Ｐ是 小於等於</li>
+</ol>
+
+<p>（a,b）∈Ｐ → ａ≤ｂ  <br />
+（b,a）∈Ｐ → ｂ≤ａ</p>
+
+<p>很明顯了吧！？，除非ａ＝ｂ否則不成立。  <br />
+值得一提的是，if(a,b)∈P 千萬別誤會成是任意(a,b)都∈Ｐ！</p>
+
+<h4 id="transitivity-">transitivity 傳遞性</h4>
+<blockquote>
+  <p><strong><em>∀a ∈ A , ∀b ∈ A , ∀c ∈ A，if (a,b)∈P and (b,c)∈P，then (a,c)∈P</em></strong></p>
+</blockquote>
+
+<p>用反對稱性的代換一下，大概就懂這個意思了吧ＸＤ</p>
+
+<h4 id="section-1">小整理</h4>
+<blockquote>
+  <p>對於集合Ａ，某二元關係Ｐ如果滿足自反性、反對稱性、傳遞性，則Ｐ為集合Ａ的一個偏序關係。</p>
+</blockquote>
+
+<p>太拗口？？  <br />
+反正拿整數以及小於等於來思考一下就好啦，運算兩邊可相同、兩邊不可任意交換、可推導（ａ≤ｂ,ｂ≤ｃ→ａ≤ｃ）！</p>
+
+<h1 id="section-2">偏序集、可比、鏈</h1>
+
+<p>終於講完偏序關係，這裡當作大家都已經理解了(?)，我們來繼續定義一些東西</p>
+
+<p>首先是偏序集合，再來是可比不可比，最後解釋鏈與反鏈。</p>
+
+<h4 id="poset">偏序集合 poset</h4>
+
+<p>偏序集 ＝ 偏序集合 ＝ partially ordered set = poset</p>
+
+<p>偏序集 ＝ 集合 ＋ 集合的一個偏序關係 ＝（Ａ, Ｐ）</p>
+
+<p>舉個例子，剛剛我們用來講解偏序關係的小於等於以及整數集合，可以表示為（𝚭, ≤）。</p>
+
+<h4 id="comparable">可比 comparable</h4>
+
+<p>若偏序集內任兩元素ａ,ｂ存在（a,b）∈Ｐ或（b,a）∈Ｐ，則稱ａ,ｂ可比（comparable）， <strong><em>否則不可比</em></strong> （incomparable）</p>
+
+<p>舉個例子，poset（ 𝚭, 整除 ）內２,４可比，３,４不可比；（𝚭, ≤）內任兩元素可比。</p>
+
+<p>（對Tree不熟先去惡補一下 或跳往chain）</p>
+
+<p>再舉個比較另類的例子（Ａ,Ｐ）</p>
+
+<ol>
+  <li>Ａ集合 = 有根（序）樹上的所有節點</li>
+  <li>Ｐ關係 = ａ在以ｂ為根的子樹內</li>
+</ol>
+
+<p>（請自行驗證Ｐ為Ａ的偏序關係）</p>
+
+<p>則對於樹上任一點ｖ，ｖ與所有祖先及子樹成員可比，與所有祖先的子樹（不包括ｖ所在的子樹）成員不可比。</p>
+
+<h4 id="chain">鏈 chain</h4>
+
+<p>我比較常聽到人家唸chain，而不稱鏈，所以這邊我們都使用 chain 來稱呼～</p>
+
+<p>chain：若集合內任兩元素可比，稱為 chain。  <br />
+antichain：若集合內任兩元素不可比，稱為 antichain。</p>
+
+<p>延續可比不可比所舉的例子來說明 chain / antichain</p>
+
+<ul>
+  <li>（𝚭, 整除）  <br />
+chain：｛１,２,４,８｝antichain：｛３,４,５｝</li>
+  <li>（Ａ,Ｐ）  <br />
+chain：｛ｖ以及所有祖先 ｝ antichain：｛ｖ的子節點 ｝</li>
+</ul>
+
+<h1 id="dilworth-theory">Dilworth theory</h1>
+
+<p>有了以上各種定義，我們可以在上面堆出一個定理</p>
+
+<h5 id="in-any-finite-poset-the-minimum-number-of-chains-cover-equals-the-maximum-size-of-an-antichain">In any finite poset, the minimum number of chains cover equals the maximum size of an antichain</h5>
+
+<p>太抽象的東西看英文比較好理解ＸＤ，有看沒有懂的請繼續往下走</p>
+
+<p>定理所說的是，令（Ｓ,Ｐ）是一個偏序集且Ｓ是有限集合（正整數集合不是個有限集合），minimum chains cover 會等同於最大 antichain 的 size</p>
+
+<p>minimun chains cover：把所有集合內元素 都涵蓋在內所需要最少的 chain 的數量。或者也可以這麼理解，集合最少會被切割成幾個 chain ，無法再更少。</p>
+
+<p>一句話，<strong><em>最大反鏈等於最小鏈覆蓋</em></strong> <br />
+當然，最大鏈等於最小反鏈覆蓋也是成立的。</p>
+
+<p>到這裡我們已經把精華解釋完畢，至於這個定理是如何成立的，建議自行先推導看看。</p>
+
+<p>key point : 集合要切成 chains 需把不可比的分開。</p>
+
+<hr />
+
+<p>還記得開頭的題目嗎？</p>
+
+<blockquote>
+  <p>在N×N方格上，原點終點分別為最左下、右上角的方格，從原點開始只能往右或往上移動，在每個橫排皆有唯一連續區間，求原點移動到終點最多可通過幾個區間？</p>
+</blockquote>
+
+<p>先觀察題目，簡單地發現一些特點：</p>
+<ol>
+  <li>一進入區間立刻往上走才是最佳解，所以通過區間的位置一定是某個經過的區間左界，當然也可能是目前這層的區間左界</li>
+  <li>上方的區間右界如果在目前位置的左方則不可能經過該區間</li>
+</ol>
+
+<h6 id="section-3">看起來很正常的兩點就是關鍵，如果下方出現無法理解的邏輯請回來複習這兩點</h6>
+
+<p>第一點保證了我們在紀錄最佳路徑時，只需透過經過的左界來維護即可。</p>
+
+<p>具體來說每次要經過區間時，如果該區間左界在目前位置的左邊則不予理會（等於往上走就剛好在一個區間內），否則更新目前位置為該區間左界（等於往上又往右走才經過該區間）。</p>
+
+<p>觀察到這邊已經可以直接拿線段樹砸題目ＡＣ了，不過我們抽象化這個問題可能會更有趣！</p>
+
+<p>現在來定義一下 poset （Ａ,Ｐ）吧</p>
+<ol>
+  <li>集合Ａ = 每個 row 的區間（不過只紀錄左界）</li>
+  <li>Ｐ關係 = ａ的目前位置可以經過ｂ區間</li>
+</ol>
+
+<p>那麽我們問題所求，其實就是找最大的 chain ！</p>
+
+<p><strong><em>心裡默念：最大鏈等於最小反鏈覆蓋</em></strong></p>
+
+<p>antichain 在這邊代表的是 ａ的目前位置無法經過ｂ區間 ，ａｂ可交換。  <br />
+根據剛剛觀察題目的兩點，我們用區間左界維護每個 antichain 的目前位置，用區間右界判斷該區間能加入哪個 antichain （也就是該區間與哪個 antichain 的目前位置不可比）</p>
+
+<p>判斷要加入哪個 antichain 使用 upper_bound() 最方便，又因為 antichain 的目前位置可能會重複，只能用 multiset ，以下附上AC code</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+<span class="n">multiset</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+    <span class="k">auto</span> <span class="n">si</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>   <span class="c1">// 找最靠近的來加入
+</span>    <span class="k">if</span><span class="p">(</span><span class="n">si</span> <span class="o">!=</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="n">s</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">si</span><span class="p">);</span>  <span class="c1">// 更新目前位置相當於刪除再加入
+</span>    <span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>落落長的一篇換幾行短短的code :D</p>
+
+<h5 id="section-4">其他題目傳送門</h5>
+
+<p><a href="http://poj.org/problem?id=1065">poj 1065</a><br />
+<a href="http://poj.org/problem?id=1548">poj 1548</a><br />
+<a href="http://poj.org/problem?id=3636">poj 3636</a></p>
+
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'xm35p4fu6'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/pro-sol/Wormholes/" class="btn" title="poj-3259-Wormholes">Previous</a>
+      
+      
+        <a href="http://localhost:4000/pro-sol/Agri-Net/" class="btn" title="poj-1258-Agri-Net">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2017 呂振麒. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-87806949-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>
