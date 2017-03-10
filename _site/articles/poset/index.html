@@ -171,7 +171,7 @@ Dilworth theorem / partially ordered set / non-strict partial order / 偏序 / �
 </ol>
 
 <p><strong><em>則我們說，Ｐ為Ａ的一個偏序關係</em></strong>  <br />
-（本文的偏序，皆是非嚴格偏序、自反偏序）</p>
+（本文的偏序，皆是以非嚴格偏序、自反偏序來說明）</p>
 
 <h4 id="reflexivity-">reflexivity 自反性</h4>
 <blockquote>
@@ -252,9 +252,13 @@ Dilworth theorem / partially ordered set / non-strict partial order / 偏序 / �
 
 <h4 id="comparable">可比 comparable</h4>
 
-<p>若偏序集內任兩元素ａ,ｂ存在（a,b）∈Ｐ或（b,a）∈Ｐ，則稱ａ,ｂ可比（comparable）， <strong><em>否則不可比</em></strong> （incomparable）</p>
+<p>在偏序集內任意兩元素ａ,ｂ，滿足（a,b）∈Ｐ或（b,a）∈Ｐ，則稱ａ,ｂ可比（comparable）， <strong><em>否則不可比</em></strong> （incomparable）</p>
 
-<p>舉個例子，poset（ 𝚭, 整除 ）內２,４可比，３,４不可比；（𝚭, ≤）內任兩元素可比。</p>
+<p>舉個例子：  <br />
+poset（ 𝚭, 整除 ）內，元素２,４可比，元素３,４不可比，因為滿足（2,4）∈Ｐ，２整除４成立；而３整除４ 或 ４整除３ 都不成立，所以３,４不可比。</p>
+
+<p>再舉個例子： <br />
+（𝚭, ≤）內任兩元素可比，思考看看吧！</p>
 
 <p>（對Tree不熟先去惡補一下 或跳往chain）</p>
 
@@ -297,6 +301,8 @@ chain：｛ｖ以及所有祖先 ｝ antichain：｛ｖ的子節點 ｝</li>
 
 <p>minimun chains cover：把所有集合內元素 都涵蓋在內所需要最少的 chain 的數量。或者也可以這麼理解，集合最少會被切割成幾個 chain ，無法再更少。</p>
 
+<p>如果要將偏序集分割成最少的 chain ，則 chain 的數量會與集合內最大（元素最多）的 antichain 大小相等。</p>
+
 <p>一句話，<strong><em>最大反鏈等於最小鏈覆蓋</em></strong> <br />
 當然，最大鏈等於最小反鏈覆蓋也是成立的。</p>
 
@@ -304,7 +310,7 @@ chain：｛ｖ以及所有祖先 ｝ antichain：｛ｖ的子節點 ｝</li>
 
 <p>key point : 集合要切成 chains 需把不可比的分開。</p>
 
-<hr />
+<h2 id="section-3">另外，雖然本文說的是自反偏序集（非嚴格偏序集），但此定理只要是偏序集都適用，需要是有限集合。</h2>
 
 <p>還記得開頭的題目嗎？</p>
 
@@ -318,7 +324,7 @@ chain：｛ｖ以及所有祖先 ｝ antichain：｛ｖ的子節點 ｝</li>
   <li>上方的區間右界如果在目前位置的左方則不可能經過該區間</li>
 </ol>
 
-<h6 id="section-3">看起來很正常的兩點就是關鍵，如果下方出現無法理解的邏輯請回來複習這兩點</h6>
+<h6 id="section-4">看起來很正常的兩點就是關鍵，如果下方出現無法理解的邏輯請回來複習這兩點</h6>
 
 <p>第一點保證了我們在紀錄最佳路徑時，只需透過經過的左界來維護即可。</p>
 
@@ -336,10 +342,21 @@ chain：｛ｖ以及所有祖先 ｝ antichain：｛ｖ的子節點 ｝</li>
 
 <p><strong><em>心裡默念：最大鏈等於最小反鏈覆蓋</em></strong></p>
 
-<p>antichain 在這邊代表的是 ａ的目前位置無法經過ｂ區間 ，ａｂ可交換。  <br />
-根據剛剛觀察題目的兩點，我們用區間左界維護每個 antichain 的目前位置，用區間右界判斷該區間能加入哪個 antichain （也就是該區間與哪個 antichain 的目前位置不可比）</p>
+<p>也就是我們也可以選擇求最小 antichain cover</p>
 
-<p>判斷要加入哪個 antichain 使用 upper_bound() 最方便，又因為 antichain 的目前位置可能會重複，只能用 multiset ，以下附上AC code</p>
+<p>複習一下</p>
+<blockquote>
+  <p>antichain：若集合內任兩元素不可比，稱為 antichain。</p>
+  <blockquote>
+    <p>可比：在偏序集內任意兩元素ａ,ｂ，滿足（a,b）∈Ｐ或（b,a）∈Ｐ，則稱ａ,ｂ可比。</p>
+  </blockquote>
+</blockquote>
+
+<p>antichain 任兩元素ａｂ不可比在這邊代表 ａ的目前位置無法經過ｂ區間 或 ｂ目前位置無法經過ａ區間。</p>
+
+<p>根據剛剛觀察題目的兩點，我們用區間左界維護每個 antichain 的目前位置，用區間右界判斷該區間能加入哪個 antichain （也就是該區間與哪個 antichain 的目前位置不可比）</p>
+
+<p>判斷要加入哪個 antichain 使用 upper_bound() 最方便，又因為 antichain 的目前位置可能會重複，只能用 multiset ，以下附上AC code + 微註解</p>
 
 <figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -360,27 +377,28 @@ chain：｛ｖ以及所有祖先 ｝ antichain：｛ｖ的子節點 ｝</li>
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
-<span class="n">multiset</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>
-
+<span class="n">multiset</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>      <span class="c1">// 集合內每個元素都是個 antichain 
+</span>
 <span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="p">;</span>
   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
     <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
-    <span class="k">auto</span> <span class="n">si</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>   <span class="c1">// 找最靠近的來加入
-</span>    <span class="k">if</span><span class="p">(</span><span class="n">si</span> <span class="o">!=</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="n">s</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">si</span><span class="p">);</span>  <span class="c1">// 更新目前位置相當於刪除再加入
-</span>    <span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">si</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>   <span class="c1">// 找最靠近的 antichain 來加入
+</span>    <span class="k">if</span><span class="p">(</span><span class="n">si</span> <span class="o">!=</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="n">s</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">si</span><span class="p">);</span>  <span class="c1">// 更新 antichain 的目前位置相當於刪除再加入
+</span>    <span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>    
   <span class="p">}</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
-<span class="p">}</span><span class="w">
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>   <span class="c1">// minimun antichain cover   
+</span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>落落長的一篇換幾行短短的code :D</p>
 
-<h5 id="section-4">其他題目傳送門</h5>
+<h5 id="section-5">其他題目傳送門</h5>
 
 <p><a href="http://poj.org/problem?id=1065">poj 1065</a><br />
 <a href="http://poj.org/problem?id=1548">poj 1548</a><br />
-<a href="http://poj.org/problem?id=3636">poj 3636</a></p>
+<a href="http://poj.org/problem?id=3636">poj 3636</a> <br />
+『難』<a href="http://poj.org/problem?id=3866">poj 3866</a></p>
 
 
         

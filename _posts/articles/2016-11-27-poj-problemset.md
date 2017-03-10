@@ -93,18 +93,18 @@ comments: true
 ### 輾轉相除法
 
 [POJ 2429 : GCD & LCM Inverse](http://poj.org/problem?id=2429)  
-[POJ 1930 : Dead Fraction](http://poj.org/problem?id=1930)  
+[POJ 1930 : Dead Fraction](http://poj.org/problem?id=1930)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Dead-Fraction/)   
 
 ### 快速冪
 
-[POJ 3641 : Pseudoprime numbers](http://poj.org/problem?id=3641)    
-[POJ 1995 : Raising Modulo Numbers](http://poj.org/problem?id=1995)    
+[POJ 3641 : Pseudoprime numbers](http://poj.org/problem?id=3641)    [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Pseudoprime-numbers/)   
+[POJ 1995 : Raising Modulo Numbers](http://poj.org/problem?id=1995)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Raising-Modulo-Numbers/)  
 
 ### 質數    
 
-[POJ 3126 : Prime Path](http://poj.org/problem?id=3126)    
-[POJ 3421 : X-factor Chains](http://poj.org/problem?id=3421)    
-[POJ 3292 : Semi-prime H-numbers](http://poj.org/problem?id=3292)    
+[POJ 3126 : Prime Path](http://poj.org/problem?id=3126)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Prime-Path/)  
+[POJ 3421 : X-factor Chains](http://poj.org/problem?id=3421)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/X-factor-Chains/)  
+[POJ 3292 : Semi-prime H-numbers](http://poj.org/problem?id=3292)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Semi-prime-H-numbers/)  
 
 ## 二分搜    
 
