@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>poj-1930-Dead Fraction &#8211; xm3の倉庫</title>
-<meta name="description" content="小數轉分數">
-<meta name="keywords" content="poj, math">
+<title>poj-1065 Wooden Sticks &#8211; xm3の倉庫</title>
+<meta name="description" content="Dilworth">
+<meta name="keywords" content="poj, lis, dilworth">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="poj-1930-Dead Fraction">
-<meta name="twitter:description" content="小數轉分數">
+<meta name="twitter:title" content="poj-1065 Wooden Sticks">
+<meta name="twitter:description" content="Dilworth">
 
 
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj-1930-Dead Fraction">
-<meta property="og:description" content="小數轉分數">
-<meta property="og:url" content="http://localhost:4000/pro-sol/Dead-Fraction/">
+<meta property="og:title" content="poj-1065 Wooden Sticks">
+<meta property="og:description" content="Dilworth">
+<meta property="og:url" content="http://localhost:4000/pro-sol/Wooden-Sticks/">
 <meta property="og:site_name" content="xm3の倉庫">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/pro-sol/Dead-Fraction/">
+<link rel="canonical" href="http://localhost:4000/pro-sol/Wooden-Sticks/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -114,10 +114,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#math" title="Pages tagged math">math</a></li>
+          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#lis" title="Pages tagged lis">lis</a></li><li><a href="http://localhost:4000/tags/#dilworth" title="Pages tagged dilworth">dilworth</a></li>
         </ul>
         
-          <h1 class="entry-title">poj-1930-Dead Fraction</h1>
+          <h1 class="entry-title">poj-1065 Wooden Sticks</h1>
         
       </header>
       <footer class="entry-meta">
@@ -135,11 +135,15 @@
       <div class="entry-content">
         <h2 id="section">傳送門：</h2>
 
-<h4 id="dead-fractionhttppojorgproblemid1930"><a href="http://poj.org/problem?id=1930">Dead Fraction</a></h4>
+<h4 id="wooden-stickshttppojorgproblemid1065"><a href="http://poj.org/problem?id=1065">Wooden Sticks</a></h4>
 
 <h2 id="section-1">題意：</h2>
 
-<p>小數轉分數，枚舉各循環節找答案。</p>
+<p>處理第一塊或與上一塊尺寸沒有滿足非嚴格遞增的木頭，花費１，求最小花費。</p>
+
+<h2 id="section-2">思路：</h2>
+
+<p>根據Dilworth定理，一串皆滿足非嚴格遞增的木頭為chain，所求minimal chain cover等於maximum antichain，題目等價於ｌ由小到大排序時，ｗ的最長遞減子序列（嚴格），使用類似LIS的ＤＰ即可完工。</p>
 
 <h2 id="code">code:</h2>
 
@@ -169,49 +173,31 @@
 24
 25
 26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36</pre></td><td class="code"><pre><span class="n">string</span> <span class="n">str</span><span class="p">;</span>
-<span class="n">ll</span> <span class="n">num</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">leng</span> <span class="p">;</span>
-<span class="n">pll</span> <span class="n">ans</span><span class="p">;</span>
-
-<span class="n">pll</span> <span class="n">sol</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
-  <span class="n">ll</span> <span class="n">ry</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">rx</span><span class="o">=</span><span class="n">num</span><span class="p">;</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">x</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="n">rx</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="n">ry</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="n">ry</span> <span class="o">+=</span> <span class="mi">9</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">x</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">leng</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">ry</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">;</span>
-  <span class="n">rx</span> <span class="o">=</span> <span class="n">num</span> <span class="o">-</span> <span class="n">rx</span><span class="p">;</span>
-  <span class="n">ll</span> <span class="n">gcd</span> <span class="o">=</span> <span class="n">__gcd</span><span class="p">(</span><span class="n">rx</span><span class="p">,</span> <span class="n">ry</span><span class="p">);</span>
-  <span class="k">return</span> <span class="n">MP</span><span class="p">(</span><span class="n">rx</span><span class="o">/</span><span class="n">gcd</span><span class="p">,</span> <span class="n">ry</span><span class="o">/</span><span class="n">gcd</span><span class="p">);</span>
+27</pre></td><td class="code"><pre><span class="kt">void</span> <span class="n">init</span><span class="p">(){</span>
+  <span class="n">memset</span><span class="p">(</span><span class="n">dp</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">dp</span><span class="p">));</span>
+  <span class="n">N</span> <span class="o">=</span> <span class="n">getint</span><span class="p">();</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">X</span> <span class="o">=</span> <span class="n">getint</span><span class="p">(),</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span> <span class="o">=</span> <span class="n">getint</span><span class="p">();</span>
+  <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span><span class="o">+</span><span class="n">N</span><span class="p">);</span>
 <span class="p">}</span>
-
+<span class="kt">void</span> <span class="n">sol</span><span class="p">(){</span>
+  <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">N</span> <span class="o">&amp;&amp;</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">)</span> 
+        <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ans</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
 <span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
-  <span class="k">while</span><span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">str</span> <span class="o">&amp;&amp;</span> <span class="n">str</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">){</span>
-    <span class="n">leng</span> <span class="o">=</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">str</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-      <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'.'</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
-      <span class="n">num</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">;</span>
-      <span class="n">num</span> <span class="o">+=</span> <span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">'0'</span><span class="p">);</span>
-      <span class="n">leng</span> <span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span>
-    
-    <span class="n">ans</span> <span class="o">=</span> <span class="n">sol</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">leng</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-      <span class="n">pll</span> <span class="n">x</span> <span class="o">=</span> <span class="n">sol</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-      <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">Y</span> <span class="o">&lt;</span> <span class="n">ans</span><span class="p">.</span><span class="n">Y</span><span class="p">)</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span><span class="p">.</span><span class="n">X</span> <span class="o">&lt;&lt;</span> <span class="sc">'/'</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span><span class="p">.</span><span class="n">Y</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">T</span> <span class="o">=</span> <span class="n">getint</span><span class="p">();</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">T</span><span class="o">--</span><span class="p">){</span>
+    <span class="n">init</span><span class="p">();</span>
+    <span class="n">sol</span><span class="p">();</span>
   <span class="p">}</span>
 <span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
@@ -247,10 +233,10 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Out-of-Hay/" class="btn" title="poj-2395-Out of Hay">Previous</a>
+        <a href="http://localhost:4000/pro-sol/Semi-prime-H-numbers/" class="btn" title="poj-3292-Semi-prime H-numbers">Previous</a>
       
       
-        <a href="http://localhost:4000/pro-sol/Nested-Dolls/" class="btn" title="poj-3636 Nested Dolls">Next</a>
+        <a href="http://localhost:4000/pro-sol/X-factor-Chains/" class="btn" title="poj-3421-X-factor Chains">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sample Post
+title: poj-1212 title
 categories: pro-sol
 excerpt: ""
 tag: [poj, ]
