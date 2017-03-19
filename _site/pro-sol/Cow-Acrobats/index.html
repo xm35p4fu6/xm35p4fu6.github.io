@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>poj-3421-X-factor Chains &#8211; xm3の倉庫</title>
-<meta name="description" content="質數題">
-<meta name="keywords" content="poj, math">
+<title>poj-3045 Cow Acrobats &#8211; xm3の倉庫</title>
+<meta name="description" content="最大值最小化">
+<meta name="keywords" content="poj, greedy">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="poj-3421-X-factor Chains">
-<meta name="twitter:description" content="質數題">
+<meta name="twitter:title" content="poj-3045 Cow Acrobats">
+<meta name="twitter:description" content="最大值最小化">
 
 
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj-3421-X-factor Chains">
-<meta property="og:description" content="質數題">
-<meta property="og:url" content="http://localhost:4000/pro-sol/X-factor-Chains/">
+<meta property="og:title" content="poj-3045 Cow Acrobats">
+<meta property="og:description" content="最大值最小化">
+<meta property="og:url" content="http://localhost:4000/pro-sol/Cow-Acrobats/">
 <meta property="og:site_name" content="xm3の倉庫">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/pro-sol/X-factor-Chains/">
+<link rel="canonical" href="http://localhost:4000/pro-sol/Cow-Acrobats/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -114,10 +114,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#math" title="Pages tagged math">math</a></li>
+          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#greedy" title="Pages tagged greedy">greedy</a></li>
         </ul>
         
-          <h1 class="entry-title">poj-3421-X-factor Chains</h1>
+          <h1 class="entry-title">poj-3045 Cow Acrobats</h1>
         
       </header>
       <footer class="entry-meta">
@@ -126,7 +126,7 @@
           <img src="http://localhost:4000/images/site-logo.png" class="bio-photo" alt="呂振麒 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
-        <span class="entry-date date published"><time datetime="2017-03-11T00:00:00+08:00"><i class="fa fa-calendar-o"></i> March 11, 2017</time></span>
+        <span class="entry-date date published"><time datetime="2017-03-19T00:00:00+08:00"><i class="fa fa-calendar-o"></i> March 19, 2017</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
@@ -135,7 +135,22 @@
       <div class="entry-content">
         <h2 id="section">傳送門：</h2>
 
-<h4 id="x-factor-chainshttppojorgproblemid3421"><a href="http://poj.org/problem?id=3421">X-factor Chains</a></h4>
+<h4 id="cow-acrobatshttppojorgproblemid3045"><a href="http://poj.org/problem?id=3045">Cow Acrobats</a></h4>
+
+<h2 id="section-1">題意：</h2>
+
+<p>每頭牛有力氣值及重量，現在他們要疊成一座塔，每頭牛的壓力是牠上方所有牛的重量總和減去牠的力氣值，請最小化壓力最大那頭牛的壓力。</p>
+
+<h2 id="section-2">思路：</h2>
+
+<p>乍看之下好像又要二分搜答案然後去排序，不過我一直想不到好的判斷function，就在我各種推演判斷方法時，突然發現每頭牛的壓力為</p>
+<blockquote>
+  <p>sum(還沒疊上去的牛的重量和) - 自己的重量 - 自己的力氣  <br />
+!?  <br />
+sum() - (重量＋力氣) 是可以greedy來保證最後得到最佳解的！</p>
+</blockquote>
+
+<p>把所有牛依照重量+力氣排序之後，模擬建塔過程邊維護答案即可……</p>
 
 <h2 id="code">code:</h2>
 
@@ -165,38 +180,32 @@
 24
 25
 26
-27
-28
-29
-30</pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">T</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">K</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">ans</span><span class="p">,</span><span class="n">cnt</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">100000</span><span class="p">],</span> <span class="n">flag</span><span class="p">,</span> <span class="n">sum</span><span class="p">;</span>
-<span class="n">ll</span> <span class="n">frac</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
-<span class="kt">void</span> <span class="n">sol</span><span class="p">(){</span>
-  <span class="n">flag</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">a</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
-    <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
-      <span class="o">++</span><span class="n">cnt</span><span class="p">,</span> <span class="n">a</span><span class="o">/=</span><span class="n">i</span><span class="p">;</span>
-    <span class="n">arr</span><span class="p">[</span><span class="n">flag</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">cnt</span><span class="p">;</span>
-    <span class="n">sum</span> <span class="o">+=</span> <span class="n">cnt</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="o">++</span><span class="n">sum</span><span class="p">;</span>
-    <span class="n">arr</span><span class="p">[</span><span class="n">flag</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="n">ll</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">frac</span><span class="p">[</span><span class="n">sum</span><span class="p">];</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">flag</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">ans</span> <span class="o">/=</span> <span class="n">frac</span><span class="p">[</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sum</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+27</pre></td><td class="code"><pre><span class="kr">inline</span> <span class="kt">bool</span> <span class="n">cmp</span><span class="p">(</span><span class="k">const</span> <span class="n">pii</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">pii</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">){</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">X</span><span class="o">+</span><span class="n">a</span><span class="p">.</span><span class="n">Y</span><span class="p">)</span><span class="o">&gt;</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">X</span><span class="o">+</span><span class="n">b</span><span class="p">.</span><span class="n">Y</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="kt">void</span> <span class="n">build</span><span class="p">(){</span>
-  <span class="n">frac</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">50</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">frac</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">frac</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span><span class="p">;</span>
+
+<span class="n">pii</span> <span class="n">arr</span><span class="p">[</span><span class="mi">50001</span><span class="p">];</span>
+
+<span class="kt">void</span> <span class="n">init</span><span class="p">(){</span>
+  <span class="n">N</span> <span class="o">=</span> <span class="n">getint</span><span class="p">();</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">X</span> <span class="o">=</span> <span class="n">getint</span><span class="p">(),</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span> <span class="o">=</span> <span class="n">getint</span><span class="p">();</span>
+    <span class="n">cnt</span> <span class="o">+=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">X</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span><span class="o">+</span><span class="n">N</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
 <span class="p">}</span>
+<span class="n">ll</span> <span class="n">sol</span><span class="p">(){</span>
+  <span class="n">ll</span> <span class="n">ans</span> <span class="o">=</span> <span class="o">-</span><span class="n">INT_MAX</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">cnt</span> <span class="o">-=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">X</span><span class="p">;</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">cnt</span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+
 <span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
-  <span class="n">build</span><span class="p">();</span>
-  <span class="k">while</span><span class="p">(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="p">){</span>
-    <span class="n">sol</span><span class="p">();</span>
-  <span class="p">}</span>
+  <span class="n">init</span><span class="p">();</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sol</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
@@ -231,10 +240,10 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Wooden-Sticks/" class="btn" title="poj-1065 Wooden Sticks">Previous</a>
+        <a href="http://localhost:4000/pro-sol/X-factor-Chains/" class="btn" title="poj-3421-X-factor Chains">Previous</a>
       
       
-        <a href="http://localhost:4000/pro-sol/Cow-Acrobats/" class="btn" title="poj-3045 Cow Acrobats">Next</a>
+        <a href="http://localhost:4000/pro-sol/Drying/" class="btn" title="poj-3104-Drying">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

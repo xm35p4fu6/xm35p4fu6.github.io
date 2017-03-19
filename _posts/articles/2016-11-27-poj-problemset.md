@@ -110,10 +110,10 @@ comments: true
 
 #### 最大值最小化    
 
-[POJ 3258 : River Hopscotch](http://poj.org/problem?id=3258)    
-[POJ 3273 : Monthly Expense](http://poj.org/problem?id=3273)    
-[POJ 3104 : Drying](http://poj.org/problem?id=3104)    
-[POJ 3045 : Cow Acrobats](http://poj.org/problem?id=3045)    
+[POJ 3258 : River Hopscotch](http://poj.org/problem?id=3258)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/River-Hopscotch/)    
+[POJ 3273 : Monthly Expense](http://poj.org/problem?id=3273)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Monthly-Expense/)    
+[POJ 3104 : Drying](http://poj.org/problem?id=3104)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Drying/)    
+[POJ 3045 : Cow Acrobats](http://poj.org/problem?id=3045)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cow-Acrobats/)    
 
 #### 平均最大化    
 
