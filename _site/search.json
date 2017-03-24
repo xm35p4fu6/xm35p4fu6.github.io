@@ -2,6 +2,22 @@
 
   
     {
+      "title"			: "poj-3579 Median",
+      "link"			: "http://localhost:4000/pro-sol/Median/",
+      "excerpt"		: "搜尋第K大"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3685 Matrix",
+      "link"			: "http://localhost:4000/pro-sol/Matrix/",
+      "excerpt"		: "搜尋矩陣上第K大"
+    }
+  
+
+  
+    ,{
       "title"			: "poj-3258 River Hopscotch",
       "link"			: "http://localhost:4000/pro-sol/River-Hopscotch/",
       "excerpt"		: "最小值最大化"

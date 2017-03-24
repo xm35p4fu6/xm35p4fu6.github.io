@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>poj-3258 River Hopscotch &#8211; xm3の倉庫</title>
-<meta name="description" content="最小值最大化">
+<title>poj-3579 Median &#8211; xm3の倉庫</title>
+<meta name="description" content="搜尋第K大">
 <meta name="keywords" content="poj, binary search">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="poj-3258 River Hopscotch">
-<meta name="twitter:description" content="最小值最大化">
+<meta name="twitter:title" content="poj-3579 Median">
+<meta name="twitter:description" content="搜尋第K大">
 
 
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj-3258 River Hopscotch">
-<meta property="og:description" content="最小值最大化">
-<meta property="og:url" content="http://localhost:4000/pro-sol/River-Hopscotch/">
+<meta property="og:title" content="poj-3579 Median">
+<meta property="og:description" content="搜尋第K大">
+<meta property="og:url" content="http://localhost:4000/pro-sol/Median/">
 <meta property="og:site_name" content="xm3の倉庫">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/pro-sol/River-Hopscotch/">
+<link rel="canonical" href="http://localhost:4000/pro-sol/Median/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -117,7 +117,7 @@
           <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#binary search" title="Pages tagged binary search">binary search</a></li>
         </ul>
         
-          <h1 class="entry-title">poj-3258 River Hopscotch</h1>
+          <h1 class="entry-title">poj-3579 Median</h1>
         
       </header>
       <footer class="entry-meta">
@@ -126,7 +126,7 @@
           <img src="http://localhost:4000/images/site-logo.png" class="bio-photo" alt="呂振麒 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
-        <span class="entry-date date published"><time datetime="2017-03-19T00:00:00+08:00"><i class="fa fa-calendar-o"></i> March 19, 2017</time></span>
+        <span class="entry-date date published"><time datetime="2017-03-25T00:00:00+08:00"><i class="fa fa-calendar-o"></i> March 25, 2017</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
@@ -135,15 +135,11 @@
       <div class="entry-content">
         <h2 id="section">傳送門：</h2>
 
-<h4 id="river-hopscotchhttppojorgproblemid3258"><a href="http://poj.org/problem?id=3258">River Hopscotch</a></h4>
+<h4 id="medianhttppojorgproblemid3579"><a href="http://poj.org/problem?id=3579">Median</a></h4>
 
-<h2 id="section-1">題意：</h2>
+<h2 id="section-1">思路：</h2>
 
-<p>移除和中央的一些石頭，使得最短距離最大。</p>
-
-<h2 id="section-2">思路：</h2>
-
-<p>二分搜答案即可, 二分搜的判定function仔細寫好就沒啥大問題了。</p>
+<p>這類型的題目解法都是先確定好答案的上下界之後去二分搜，第Ｋ大表示此數比K-1個數大，仔細思考如何使二分搜最終得到此答案即可。</p>
 
 <h2 id="code">code:</h2>
 
@@ -177,36 +173,66 @@
 28
 29
 30
-31</pre></td><td class="code"><pre><span class="kr">inline</span> <span class="kt">bool</span> <span class="n">suc</span><span class="p">(</span><span class="k">const</span> <span class="n">ll</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">){</span>
-  <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">M</span><span class="p">;</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">){</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">){</span>
-      <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">--</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-      <span class="k">if</span><span class="p">(</span><span class="o">++</span><span class="n">i</span> <span class="o">==</span> <span class="n">N</span><span class="p">){</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">End</span><span class="o">-</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre></td><td class="code"><pre><span class="n">ll</span> <span class="n">N</span><span class="p">,</span> <span class="n">tar</span><span class="p">;</span>
+<span class="n">vi</span> <span class="n">arr</span><span class="p">;</span>
+<span class="kt">void</span> <span class="n">init</span><span class="p">(){</span>
+  <span class="kt">int</span> <span class="n">tmp</span><span class="p">;</span>
+  <span class="n">arr</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">getint</span><span class="p">();</span>
+    <span class="n">arr</span><span class="p">.</span><span class="n">PB</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
   <span class="p">}</span>
-  <span class="k">return</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">End</span><span class="o">-</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="n">and</span> <span class="n">b</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">);</span>
+  <span class="n">tar</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span> <span class="o">*</span> <span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">;</span>
+  <span class="n">tar</span> <span class="o">=</span> <span class="p">(</span><span class="n">tar</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// 中位數前有幾個數字
+</span><span class="p">}</span>
+<span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">cnt</span><span class="p">;</span>
+
+<span class="kr">inline</span> <span class="kt">bool</span> <span class="n">suc</span><span class="p">(</span><span class="n">ll</span> <span class="n">p</span><span class="p">){</span>
+  <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cnt</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">N</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">r</span><span class="o">&lt;</span><span class="n">l</span> <span class="n">or</span> <span class="n">arr</span><span class="p">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">p</span><span class="p">)</span> 
+      <span class="o">++</span><span class="n">r</span><span class="p">;</span>
+    <span class="k">else</span><span class="p">{</span>
+      <span class="n">cnt</span> <span class="o">+=</span> <span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="p">);</span>
+      <span class="o">++</span><span class="n">l</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">cnt</span> <span class="o">+=</span> <span class="p">((</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="p">))</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">cnt</span><span class="o">&lt;=</span><span class="n">tar</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="n">ll</span> <span class="n">sol</span><span class="p">(){</span>
-  <span class="n">R</span> <span class="o">=</span> <span class="n">L</span> <span class="o">=</span> <span class="n">End</span><span class="p">;</span>
-  <span class="n">R</span><span class="o">++</span><span class="p">;</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="n">L</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
-  <span class="n">L</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">End</span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
-  <span class="k">if</span><span class="p">(</span><span class="n">R</span> <span class="o">==</span> <span class="n">L</span><span class="p">)</span> <span class="k">return</span> <span class="n">L</span><span class="p">;</span>
-<span class="cp">#define mid ((L+R)&gt;&gt;1)
-</span>  <span class="k">while</span><span class="p">(</span><span class="n">R</span><span class="o">-</span><span class="n">L</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> 
-    <span class="n">suc</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span> <span class="o">?</span> <span class="n">L</span><span class="o">=</span><span class="n">mid</span> <span class="o">:</span> <span class="n">R</span><span class="o">=</span><span class="n">mid</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">sol</span><span class="p">(){</span>
+  <span class="kt">int</span> <span class="n">L</span><span class="o">=</span><span class="n">INT_MAX</span><span class="p">,</span> <span class="n">R</span><span class="p">;</span>
+  <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">arr</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+  <span class="n">R</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="n">min</span> <span class="p">(</span> <span class="n">L</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="cp">#define mid ((L+R)/2)
+</span>  <span class="k">while</span><span class="p">(</span><span class="n">R</span><span class="o">-</span><span class="n">L</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="n">suc</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span> <span class="o">?</span> <span class="n">L</span><span class="o">=</span><span class="n">mid</span> <span class="o">:</span> <span class="n">R</span><span class="o">=</span><span class="n">mid</span><span class="p">;</span>
   <span class="k">return</span> <span class="n">L</span><span class="p">;</span>
 <span class="p">}</span>
+
 <span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
-  <span class="n">init</span><span class="p">();</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sol</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">N</span><span class="p">){</span>
+    <span class="n">init</span><span class="p">();</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sol</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
 <span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
@@ -241,10 +267,8 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Monthly-Expense/" class="btn" title="poj-3273 Monthly Expense">Previous</a>
+        <a href="http://localhost:4000/pro-sol/Matrix/" class="btn" title="poj-3685 Matrix">Previous</a>
       
-      
-        <a href="http://localhost:4000/pro-sol/Matrix/" class="btn" title="poj-3685 Matrix">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
