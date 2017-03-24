@@ -122,9 +122,9 @@ comments: true
 
 #### 搜尋第Ｋ個值    
 
-[POJ 3579 : Median](http://poj.org/problem?id=3579)    
-[POJ 3685 : Matrix](http://poj.org/problem?id=3685)    
-
+[POJ 3579 : Median](http://poj.org/problem?id=3579)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Median/)        
+[POJ 3685 : Matrix](http://poj.org/problem?id=3685)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Matrix/)        
+    
 #### 將第Ｋ個最小化    
 
 [POJ 2010 : Moo University-Financial Aid](http://poj.org/problem?id=2010)    
