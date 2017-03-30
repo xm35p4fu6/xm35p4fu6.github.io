@@ -39,7 +39,7 @@ comments: true
 
 [POJ 2393 : Yogurt factory](http://poj.org/problem?id=2393) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Yogurt-factory/)  
 [POJ 1017 : Packets](http://poj.org/problem?id=1017) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Packets/)  
-[POJ 3040 : Allowance](http://poj.org/problem?id=3040) [<font color="green"><b>ċȯḋė</b></font>](/Allowance/)  
+[POJ 3040 : Allowance](http://poj.org/problem?id=3040) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Allowance/)  
 [POJ 1862 : Stripies](http://poj.org/problem?id=1862) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Stripies/)  
 [POJ 3262 : Protecting the Flowers](http://poj.org/problem?id=3262) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Protecting-the-Flowers/)  
 
@@ -49,7 +49,7 @@ comments: true
 [POJ 3176 : Cow Bowlong](http://poj.org/problem?id=3176) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cow-Bowlong/)  
 [POJ 2229 : Sumsets](http://poj.org/problem?id=2229) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sumsets/)  
 [POJ 2385 : Apple Catching](http://poj.org/problem?id=2385) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Apple-Catching/)  
-[POJ 3616 : Mklking Time](http://poj.org/problem?id=3616) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Milking-Time/)  
+[POJ 3616 : Milking Time](http://poj.org/problem?id=3616) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Milking-Time/)  
 [POJ 3280 : Cheapest Palindrome](http://poj.org/problem?id=3280) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cheapest-Palindrome/)  
 
 #### 漸進式優化ＤＰ
@@ -117,8 +117,8 @@ comments: true
 
 #### 平均最大化    
 
-[POJ 2976 : Droppint tests](http://poj.org/problem?id=2976)    
-[POJ 3111 : K Best](http://poj.org/problem?id=3111)    
+[POJ 2976 : Droppint tests](http://poj.org/problem?id=2976)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Droppint-tests/)    
+[POJ 3111 : K Best](http://poj.org/problem?id=3111)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/K-Best/)    
 
 #### 搜尋第Ｋ個值    
 
@@ -127,13 +127,12 @@ comments: true
     
 #### 將第Ｋ個最小化    
 
-[POJ 2010 : Moo University-Financial Aid](http://poj.org/problem?id=2010)    
-[POJ 3662 : Telephonea Lines](http://poj.org/problem?id=3662)    
+[POJ 3662 : Telephonea Lines](http://poj.org/problem?id=3662)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Telephonea-Lines/)    
 
 #### 其他二分法    
 
-[POJ 1759 : Garland](http://poj.org/problem?id=1759)    
-[POJ 3484 : Showstopper](http://poj.org/problem?id=3484)    
+[POJ 1759 : Garland](http://poj.org/problem?id=1759)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Garland/)    
+[POJ 3484 : Showstopper](http://poj.org/problem?id=3484)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Showstopper/)    
 
 ## 常用技巧    
 
