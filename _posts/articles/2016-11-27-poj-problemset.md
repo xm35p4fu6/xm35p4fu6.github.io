@@ -138,12 +138,16 @@ comments: true
 
 #### 爬行法    
 
+[POJ 3061 : Subsequence](http://poj.org/problem?id=3061)    
+[POJ 3320 : Jessica's Reading Problem](http://poj.org/problem?id=3320)    
 [POJ 2566 : Bound Found](http://poj.org/problem?id=2566)    
 [POJ 2739 : Sum of Consecutive Prim Numbers](http://poj.org/problem?id=2739)    
 [POJ 2100 : Graveyard Design](http://poj.org/problem?id=2100)    
 
 #### 反轉    
 
+[POJ 3276 : Face The Right Way](http://poj.org/problem?id=3276)    
+[POJ 3279 : Fliptile](http://poj.org/problem?id=3279)    
 [POJ 3185 : The Water Bowls](http://poj.org/problem?id=3185)    
 [POJ 1222 : Extended Lights Out](http://poj.org/problem?id=1222)    
 
