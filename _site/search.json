@@ -2,6 +2,30 @@
 
   
     {
+      "title"			: "poj-3061 Subsequence",
+      "link"			: "http://localhost:4000/pro-sol/Subsequence/",
+      "excerpt"		: "2 pointer"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3320 Jessica's Reading Problem",
+      "link"			: "http://localhost:4000/pro-sol/Jessica's-Reading-Problem/",
+      "excerpt"		: "2 pointer"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-2566 Bound Found",
+      "link"			: "http://localhost:4000/pro-sol/Bound-Found/",
+      "excerpt"		: "2 pointer"
+    }
+  
+
+  
+    ,{
       "title"			: "poj-3662 Telephone Lines",
       "link"			: "http://localhost:4000/pro-sol/Telephonea-Lines/",
       "excerpt"		: "路徑上的最大值最小化"

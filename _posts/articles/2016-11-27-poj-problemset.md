@@ -138,10 +138,10 @@ comments: true
 
 #### 爬行法    
 
-[POJ 3061 : Subsequence](http://poj.org/problem?id=3061)    
-[POJ 3320 : Jessica's Reading Problem](http://poj.org/problem?id=3320)    
-[POJ 2566 : Bound Found](http://poj.org/problem?id=2566)    
-[POJ 2739 : Sum of Consecutive Prim Numbers](http://poj.org/problem?id=2739)    
+[POJ 3061 : Subsequence](http://poj.org/problem?id=3061)  [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Subsequence/)    
+[POJ 3320 : Jessica's Reading Problem](http://poj.org/problem?id=3320)    [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Jessica's-Reading-Problem/)    
+[POJ 2566 : Bound Found](http://poj.org/problem?id=2566)  
+[POJ 2739 : Sum of Consecutive Prim Numbers](http://poj.org/problem?id=2739)   
 [POJ 2100 : Graveyard Design](http://poj.org/problem?id=2100)    
 
 #### 反轉    

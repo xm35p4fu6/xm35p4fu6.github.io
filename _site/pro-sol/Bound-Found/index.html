@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>最新發表 &#8211; xm3の倉庫</title>
-<meta name="description" content="xm3的倉庫 放置解題記錄以及一些筆記">
-
+<title>poj-2566 Bound Found &#8211; xm3の倉庫</title>
+<meta name="description" content="2 pointer">
+<meta name="keywords" content="poj, 2 pointer">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="最新發表">
-<meta name="twitter:description" content="xm3的倉庫 放置解題記錄以及一些筆記">
+<meta name="twitter:title" content="poj-2566 Bound Found">
+<meta name="twitter:description" content="2 pointer">
 
 
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最新發表">
-<meta property="og:description" content="xm3的倉庫 放置解題記錄以及一些筆記">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="poj-2566 Bound Found">
+<meta property="og:description" content="2 pointer">
+<meta property="og:url" content="http://localhost:4000/pro-sol/Bound-Found/">
 <meta property="og:site_name" content="xm3の倉庫">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/pro-sol/Bound-Found/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -77,7 +77,7 @@
 
 </head>
 
-<body id="page">
+<body id="post">
 
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav" class="animated drop">
@@ -109,39 +109,79 @@
 
 
 <div id="main" role="main">
-  <article class="entry">
+  <article class="hentry">
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title">最新發表</h1>
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#2 pointer" title="Pages tagged 2 pointer">2 pointer</a></li>
+        </ul>
+        
+          <h1 class="entry-title">poj-2566 Bound Found</h1>
+        
       </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://localhost:4000/images/site-logo.png" class="bio-photo" alt="呂振麒 bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">呂振麒</span></span>
+        <span class="entry-date date published"><time datetime="2017-05-18T00:00:00+08:00"><i class="fa fa-calendar-o"></i> May 18, 2017</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        
+        
+      </footer>
       <div class="entry-content">
-        <ul class="post-list">
+        <h2 id="section">傳送門：</h2>
 
-  <li><article><a href="/pro-sol/Subsequence/">poj-3061 Subsequence <span class="entry-date"><time datetime="2017-05-18T00:00:00+08:00">May 18, 2017</time></span> <span class="excerpt">2 pointer</span></a></article></li>
+<h4 id="bound-foundhttppojorgproblemid2566"><a href="http://poj.org/problem?id=2566">Bound Found</a></h4>
 
-  <li><article><a href="/pro-sol/Jessica's-Reading-Problem/">poj-3320 Jessica's Reading Problem <span class="entry-date"><time datetime="2017-05-18T00:00:00+08:00">May 18, 2017</time></span> <span class="excerpt">2 pointer</span></a></article></li>
+<h2 id="section-1">題意：</h2>
 
-  <li><article><a href="/pro-sol/Bound-Found/">poj-2566 Bound Found <span class="entry-date"><time datetime="2017-05-18T00:00:00+08:00">May 18, 2017</time></span> <span class="excerpt">2 pointer</span></a></article></li>
+<p>先給出整數數列之後再給一些值，對於每個值求出數列中連續的一段區間，此區間和與值相差最少（絕對值）。</p>
 
-  <li><article><a href="/pro-sol/Telephonea-Lines/">poj-3662 Telephone Lines <span class="entry-date"><time datetime="2017-03-29T00:00:00+08:00">March 29, 2017</time></span> <span class="excerpt">路徑上的最大值最小化</span></a></article></li>
+<h2 id="section-2">思路：</h2>
 
-  <li><article><a href="/pro-sol/Showstopper/">poj-3484 Showstopper <span class="entry-date"><time datetime="2017-03-29T00:00:00+08:00">March 29, 2017</time></span> <span class="excerpt">二分搜函式加總範圍</span></a></article></li>
+<h2 id="code">code:</h2>
 
-  <li><article><a href="/pro-sol/K-Best/">poj-3111 K Best <span class="entry-date"><time datetime="2017-03-29T00:00:00+08:00">March 29, 2017</time></span> <span class="excerpt">求平均值最大</span></a></article></li>
 
-  <li><article><a href="/pro-sol/Garland/">poj-1759 Garland <span class="entry-date"><time datetime="2017-03-29T00:00:00+08:00">March 29, 2017</time></span> <span class="excerpt">構造一個特定函數</span></a></article></li>
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'xm35p4fu6'; // required: replace example with your forum shortname
 
-  <li><article><a href="/pro-sol/Droppint-tests/">poj-2976 Dropping tests <span class="entry-date"><time datetime="2017-03-29T00:00:00+08:00">March 29, 2017</time></span> <span class="excerpt">平均最大化</span></a></article></li>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 
-  <li><article><a href="/pro-sol/Median/">poj-3579 Median <span class="entry-date"><time datetime="2017-03-25T00:00:00+08:00">March 25, 2017</time></span> <span class="excerpt">搜尋第K大</span></a></article></li>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-  <li><article><a href="/pro-sol/Matrix/">poj-3685 Matrix <span class="entry-date"><time datetime="2017-03-25T00:00:00+08:00">March 25, 2017</time></span> <span class="excerpt">搜尋矩陣上第K大</span></a></article></li>
-
-</ul>
-
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/pro-sol/Telephonea-Lines/" class="btn" title="poj-3662 Telephone Lines">Previous</a>
+      
+      
+        <a href="http://localhost:4000/pro-sol/Jessica's-Reading-Problem/" class="btn" title="poj-3320 Jessica's Reading Problem">Next</a>
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
