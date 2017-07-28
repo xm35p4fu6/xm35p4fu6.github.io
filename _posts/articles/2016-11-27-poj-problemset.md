@@ -14,43 +14,43 @@ comments: true
 
 #### 深度優先搜尋
 
-[POJ 1979 : Red and Black](http://poj.org/problem?id=1979) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Red-and-Black/)  
-[POJ 3009 : Curing 2.0](http://poj.org/problem?id=3009) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Curing-2.0/)  
+[POJ 1979 : Red and Black](http://poj.org/problem?id=1979)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Red-and-Black/) </span>  
+[POJ 3009 : Curing 2.0](http://poj.org/problem?id=3009)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Curing-2.0/) </span>  
 
 #### 廣度優先搜尋
 
-[POJ 3669 : Meteor Shower](http://poj.org/problem?id=3669) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Meteor-Shower/)  
+[POJ 3669 : Meteor Shower](http://poj.org/problem?id=3669)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Meteor-Shower/) </span>  
 
 #### 完全列舉
 
-[POJ 2718 : Smallest Difference](http://poj.org/problem?id=2718) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Smallest-Difference/)  
-[POJ 3187 : Backward Digit Sums](http://poj.org/problem?id=3187) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Backward-Digit-Sums/)   
-[POJ 3050 : Hopscotch](http://poj.org/problem?id=3050) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Hopscotch/)  
+[POJ 2718 : Smallest Difference](http://poj.org/problem?id=2718)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Smallest-Difference/) </span>  
+[POJ 3187 : Backward Digit Sums](http://poj.org/problem?id=3187)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Backward-Digit-Sums/) </span>   
+[POJ 3050 : Hopscotch](http://poj.org/problem?id=3050)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Hopscotch/) </span>  
 
 ## 貪心
 
 #### 區間
 
-[POJ 2376 : Cleaning Shifts](http://poj.org/problem?id=2376) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cleaning-Shifts/)  
-[POJ 1328 : Radar Installation](http://poj.org/problem?id=1328) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Radar-Installation/)  
-[POJ 3190 : Stall Reservations](http://poj.org/problem?id=3190) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Stall-Reservations/)  
+[POJ 2376 : Cleaning Shifts](http://poj.org/problem?id=2376)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cleaning-Shifts/) </span>  
+[POJ 1328 : Radar Installation](http://poj.org/problem?id=1328)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Radar-Installation/) </span>  
+[POJ 3190 : Stall Reservations](http://poj.org/problem?id=3190)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Stall-Reservations/) </span>  
 
 ####  其他
 
-[POJ 2393 : Yogurt factory](http://poj.org/problem?id=2393) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Yogurt-factory/)  
-[POJ 1017 : Packets](http://poj.org/problem?id=1017) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Packets/)  
-[POJ 3040 : Allowance](http://poj.org/problem?id=3040) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Allowance/)  
-[POJ 1862 : Stripies](http://poj.org/problem?id=1862) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Stripies/)  
-[POJ 3262 : Protecting the Flowers](http://poj.org/problem?id=3262) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Protecting-the-Flowers/)  
+[POJ 2393 : Yogurt factory](http://poj.org/problem?id=2393)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Yogurt-factory/) </span>  
+[POJ 1017 : Packets](http://poj.org/problem?id=1017)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Packets/) </span>  
+[POJ 3040 : Allowance](http://poj.org/problem?id=3040)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Allowance/) </span>  
+[POJ 1862 : Stripies](http://poj.org/problem?id=1862)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Stripies/) </span>  
+[POJ 3262 : Protecting the Flowers](http://poj.org/problem?id=3262)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Protecting-the-Flowers/) </span>  
 
 ## ＤＰ
 
 #### 基礎ＤＰ
-[POJ 3176 : Cow Bowlong](http://poj.org/problem?id=3176) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cow-Bowlong/)  
-[POJ 2229 : Sumsets](http://poj.org/problem?id=2229) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sumsets/)  
-[POJ 2385 : Apple Catching](http://poj.org/problem?id=2385) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Apple-Catching/)  
-[POJ 3616 : Milking Time](http://poj.org/problem?id=3616) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Milking-Time/)  
-[POJ 3280 : Cheapest Palindrome](http://poj.org/problem?id=3280) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cheapest-Palindrome/)  
+[POJ 3176 : Cow Bowlong](http://poj.org/problem?id=3176)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cow-Bowlong/) </span>  
+[POJ 2229 : Sumsets](http://poj.org/problem?id=2229)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sumsets/) </span>  
+[POJ 2385 : Apple Catching](http://poj.org/problem?id=2385)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Apple-Catching/) </span>  
+[POJ 3616 : Milking Time](http://poj.org/problem?id=3616)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Milking-Time/) </span>  
+[POJ 3280 : Cheapest Palindrome](http://poj.org/problem?id=3280)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cheapest-Palindrome/) </span>  
 
 #### 漸進式優化ＤＰ
 
@@ -69,80 +69,80 @@ comments: true
 
 ### Priority Queue
 
-[POJ 3614 : Sunscreen](http://poj.org/problem?id=3614) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sunscreen/)  
-[POJ 2010 : Moo University - Financial Aid](http://poj.org/problem?id=2010) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Moo-University-Financial-Aid/)  
+[POJ 3614 : Sunscreen](http://poj.org/problem?id=3614)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sunscreen/) </span>  
+[POJ 2010 : Moo University - Financial Aid](http://poj.org/problem?id=2010)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Moo-University-Financial-Aid/) </span>  
 
 ### Union-Find Tree
 
-[POJ 2236 : Wireless Network](http://poj.org/problem?id=2236) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Wireless-Network/)  
-[POJ 1703 : Find them, Catch them](http://poj.org/problem?id=1703) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Find-them,-Catch-them/)  
+[POJ 2236 : Wireless Network](http://poj.org/problem?id=2236)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Wireless-Network/) </span>  
+[POJ 1703 : Find them, Catch them](http://poj.org/problem?id=1703)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Find-them,-Catch-them/) </span>  
 
 ### 最短路徑
 
-[POJ 2139 : Six Degrees of Cowvin Bacon](http://poj.org/problem?id=2139) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Six-Degrees-of-Cowvin-Bacon/)  
-[POJ 3259 : Wormholes](http://poj.org/problem?id=3259) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Wormholes/)  
-[POJ 3268 : Silver Cow Party](http://poj.org/problem?id=3268) [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Silver-Cow-Party/)  
+[POJ 2139 : Six Degrees of Cowvin Bacon](http://poj.org/problem?id=2139)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Six-Degrees-of-Cowvin-Bacon/) </span>  
+[POJ 3259 : Wormholes](http://poj.org/problem?id=3259)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Wormholes/) </span>  
+[POJ 3268 : Silver Cow Party](http://poj.org/problem?id=3268)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Silver-Cow-Party/) </span>  
 
 ### ＭＳＴ
 
-[POJ 1258 : Agri-Net](http://poj.org/problem?id=1258)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Agri-Net/)  
-[POJ 2377 : Bad Cowtractors](http://poj.org/problem?id=2377)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Bad-Cowtractors/)  
-[POJ 2395 : Out of Hay](http://poj.org/problem?id=2395)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Out-of-Hay/)   
+[POJ 1258 : Agri-Net](http://poj.org/problem?id=1258)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Agri-Net/) </span>  
+[POJ 2377 : Bad Cowtractors](http://poj.org/problem?id=2377)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Bad-Cowtractors/) </span>  
+[POJ 2395 : Out of Hay](http://poj.org/problem?id=2395)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Out-of-Hay/) </span>   
 
 
 ### 輾轉相除法
 
 [POJ 2429 : GCD & LCM Inverse](http://poj.org/problem?id=2429)  
-[POJ 1930 : Dead Fraction](http://poj.org/problem?id=1930)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Dead-Fraction/)   
+[POJ 1930 : Dead Fraction](http://poj.org/problem?id=1930)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Dead-Fraction/) </span>   
 
 ### 快速冪
 
-[POJ 3641 : Pseudoprime numbers](http://poj.org/problem?id=3641)    [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Pseudoprime-numbers/)   
-[POJ 1995 : Raising Modulo Numbers](http://poj.org/problem?id=1995)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Raising-Modulo-Numbers/)  
+[POJ 3641 : Pseudoprime numbers](http://poj.org/problem?id=3641)   <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Pseudoprime-numbers/) </span>   
+[POJ 1995 : Raising Modulo Numbers](http://poj.org/problem?id=1995)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Raising-Modulo-Numbers/) </span>  
 
 ### 質數    
 
-[POJ 3126 : Prime Path](http://poj.org/problem?id=3126)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Prime-Path/)  
-[POJ 3421 : X-factor Chains](http://poj.org/problem?id=3421)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/X-factor-Chains/)  
-[POJ 3292 : Semi-prime H-numbers](http://poj.org/problem?id=3292)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Semi-prime-H-numbers/)  
+[POJ 3126 : Prime Path](http://poj.org/problem?id=3126)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Prime-Path/) </span>  
+[POJ 3421 : X-factor Chains](http://poj.org/problem?id=3421)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/X-factor-Chains/) </span>  
+[POJ 3292 : Semi-prime H-numbers](http://poj.org/problem?id=3292)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Semi-prime-H-numbers/) </span>  
 
 ## 二分搜    
 
 #### 最大值最小化    
 
-[POJ 3258 : River Hopscotch](http://poj.org/problem?id=3258)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/River-Hopscotch/)    
-[POJ 3273 : Monthly Expense](http://poj.org/problem?id=3273)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Monthly-Expense/)    
-[POJ 3104 : Drying](http://poj.org/problem?id=3104)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Drying/)    
-[POJ 3045 : Cow Acrobats](http://poj.org/problem?id=3045)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cow-Acrobats/)    
+[POJ 3258 : River Hopscotch](http://poj.org/problem?id=3258)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/River-Hopscotch/) </span>    
+[POJ 3273 : Monthly Expense](http://poj.org/problem?id=3273)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Monthly-Expense/) </span>    
+[POJ 3104 : Drying](http://poj.org/problem?id=3104)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Drying/) </span>    
+[POJ 3045 : Cow Acrobats](http://poj.org/problem?id=3045)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cow-Acrobats/) </span>    
 
 #### 平均最大化    
 
-[POJ 2976 : Droppint tests](http://poj.org/problem?id=2976)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Droppint-tests/)    
-[POJ 3111 : K Best](http://poj.org/problem?id=3111)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/K-Best/)    
+[POJ 2976 : Droppint tests](http://poj.org/problem?id=2976)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Droppint-tests/) </span>    
+[POJ 3111 : K Best](http://poj.org/problem?id=3111)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/K-Best/) </span>    
 
 #### 搜尋第Ｋ個值    
 
-[POJ 3579 : Median](http://poj.org/problem?id=3579)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Median/)        
-[POJ 3685 : Matrix](http://poj.org/problem?id=3685)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Matrix/)        
+[POJ 3579 : Median](http://poj.org/problem?id=3579)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Median/) </span>        
+[POJ 3685 : Matrix](http://poj.org/problem?id=3685)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Matrix/) </span>        
     
 #### 將第Ｋ個最小化    
 
-[POJ 3662 : Telephonea Lines](http://poj.org/problem?id=3662)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Telephonea-Lines/)    
+[POJ 3662 : Telephonea Lines](http://poj.org/problem?id=3662)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Telephonea-Lines/) </span>    
 
 #### 其他二分法    
 
-[POJ 1759 : Garland](http://poj.org/problem?id=1759)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Garland/)    
-[POJ 3484 : Showstopper](http://poj.org/problem?id=3484)   [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Showstopper/)    
+[POJ 1759 : Garland](http://poj.org/problem?id=1759)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Garland/) </span>    
+[POJ 3484 : Showstopper](http://poj.org/problem?id=3484)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Showstopper/) </span>    
 
 ## 常用技巧    
 
 #### 爬行法    
 
-[POJ 3061 : Subsequence](http://poj.org/problem?id=3061)  [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Subsequence/)    
-[POJ 3320 : Jessica's Reading Problem](http://poj.org/problem?id=3320)    [<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Jessica's-Reading-Problem/)    
-[POJ 2566 : Bound Found](http://poj.org/problem?id=2566)  
-[POJ 2739 : Sum of Consecutive Prim Numbers](http://poj.org/problem?id=2739)   
-[POJ 2100 : Graveyard Design](http://poj.org/problem?id=2100)    
+[POJ 3061 : Subsequence](http://poj.org/problem?id=3061) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Subsequence/) </span>    
+[POJ 3320 : Jessica's Reading Problem](http://poj.org/problem?id=3320) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Jessica's-Reading-Problem/) </span>    
+[POJ 2566 : Bound Found](http://poj.org/problem?id=2566)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Bound-Found/) </span>    
+[POJ 2739 : Sum of Consecutive Prim Numbers](http://poj.org/problem?id=2739)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sum-of-Consecutive-Prime-Numbers/) </span>    
+[POJ 2100 : Graveyard Design](http://poj.org/problem?id=2100)    <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Graveyard-Design/) </span>    
 
 #### 反轉    
 

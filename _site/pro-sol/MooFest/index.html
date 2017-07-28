@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>poj-1862-Stripies &#8211; xm3 倉庫</title>
-<meta name="description" content="greedy">
-<meta name="keywords" content="poj, greedy">
+<title>poj-1990 MooFest &#8211; xm3 倉庫</title>
+<meta name="description" content="">
+<meta name="keywords" content="poj">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="poj-1862-Stripies">
-<meta name="twitter:description" content="greedy">
+<meta name="twitter:title" content="poj-1990 MooFest">
+<meta name="twitter:description" content="">
 
 
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj-1862-Stripies">
-<meta property="og:description" content="greedy">
-<meta property="og:url" content="http://localhost:4000/pro-sol/Stripies/">
+<meta property="og:title" content="poj-1990 MooFest">
+<meta property="og:description" content="">
+<meta property="og:url" content="http://localhost:4000/pro-sol/MooFest/">
 <meta property="og:site_name" content="xm3 倉庫">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/pro-sol/Stripies/">
+<link rel="canonical" href="http://localhost:4000/pro-sol/MooFest/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3 倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -120,10 +120,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#greedy" title="Pages tagged greedy">greedy</a></li>
+          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li>
         </ul>
         
-          <h1 class="entry-title">poj-1862-Stripies</h1>
+          <h1 class="entry-title">poj-1990 MooFest</h1>
         
       </header>
       <footer class="entry-meta">
@@ -132,53 +132,22 @@
           <img src="http://localhost:4000/images/site-logo.png" class="bio-photo" alt="呂振麒 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
-        <span class="entry-date date published"><time datetime="2016-11-19T00:00:00+08:00"><i class="fa fa-calendar-o"></i> November 19, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2017-05-30T00:00:00+08:00"><i class="fa fa-calendar-o"></i> May 30, 2017</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
         
       </footer>
       <div class="entry-content">
-        <h2 id="section">傳送門</h2>
+        <h2 id="section">傳送門：</h2>
 
-<h4 id="stripieshttppojorgproblemid3190"><a href="http://poj.org/problem?id=3190">Stripies</a></h4>
+<h4 id="section-1"><a href=""></a></h4>
 
-<h2 id="code">code</h2>
+<h2 id="section-2">題意：</h2>
 
-<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17</pre></td><td class="code"><pre><span class="cp">#include &lt;iostream&gt;
-#include &lt;cmath&gt;
-#include &lt;algorithm&gt;
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">arr</span><span class="p">[</span><span class="mi">1000</span><span class="p">];</span>
-<span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">);</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="n">arr</span><span class="o">+</span><span class="n">i</span><span class="p">);</span>
-  <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span><span class="o">+</span><span class="n">N</span><span class="p">);</span>
-  <span class="k">while</span><span class="p">(</span><span class="n">N</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">){</span>
-    <span class="n">arr</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
-    <span class="o">--</span><span class="n">N</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">"%.3lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-<span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<h2 id="section-3">思路：</h2>
+
+<h2 id="code">code:</h2>
 
 
         
@@ -211,10 +180,10 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Stall-Reservations/" class="btn" title="poj-3190-Stall Reservations">Previous</a>
+        <a href="http://localhost:4000/pro-sol/Subsequence/" class="btn" title="poj-3061 Subsequence">Previous</a>
       
       
-        <a href="http://localhost:4000/pro-sol/Yogurt-factory/" class="btn" title="poj-2393-Yogurt factory">Next</a>
+        <a href="http://localhost:4000/pro-sol/Bound-Found/" class="btn" title="poj-2566 Bound Found">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

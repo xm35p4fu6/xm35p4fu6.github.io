@@ -1,8 +1,13 @@
 # Site navigation links
 
-- title: 文章
+- title: -文章-
   url: /articles/
 
-- title: 解題記錄
+- title: -解題記錄-
   url: /pro-sol/
 
+- title: -Tag分類-
+  url: /tags/
+
+- title: -POJ題單-
+  url: /articles/poj-problemset/

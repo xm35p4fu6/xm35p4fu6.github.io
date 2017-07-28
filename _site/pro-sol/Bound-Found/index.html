@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>poj-2566 Bound Found &#8211; xm3の倉庫</title>
-<meta name="description" content="2 pointer">
+<title>poj-2566 Bound Found &#8211; xm3 倉庫</title>
+<meta name="description" content="sort + 2 pointer">
 <meta name="keywords" content="poj, 2 pointer">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="poj-2566 Bound Found">
-<meta name="twitter:description" content="2 pointer">
+<meta name="twitter:description" content="sort + 2 pointer">
 
 
 
@@ -23,9 +23,9 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
 <meta property="og:title" content="poj-2566 Bound Found">
-<meta property="og:description" content="2 pointer">
+<meta property="og:description" content="sort + 2 pointer">
 <meta property="og:url" content="http://localhost:4000/pro-sol/Bound-Found/">
-<meta property="og:site_name" content="xm3の倉庫">
+<meta property="og:site_name" content="xm3 倉庫">
 
 <!-- Webmaster Tools verfication -->
 <meta name="google-site-verification" content="3Y2I2JKgMnXBa5y4r6TZEUdGEyzRPrkWMEX0WKNGquE">
@@ -33,7 +33,7 @@
 
 
 <link rel="canonical" href="http://localhost:4000/pro-sol/Bound-Found/">
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3の倉庫 Feed">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3 倉庫 Feed">
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -84,10 +84,16 @@
 	    <ul>
       
 		    
-		    <li><a href="http://localhost:4000/articles/" >文章</a></li>
+		    <li><a href="http://localhost:4000/articles/" >-文章-</a></li>
 		  
 		    
-		    <li><a href="http://localhost:4000/pro-sol/" >解題記錄</a></li>
+		    <li><a href="http://localhost:4000/pro-sol/" >-解題記錄-</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/tags/" >-Tag分類-</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/articles/poj-problemset/" >-POJ題單-</a></li>
 		  
 	    </ul>
 	</nav>
@@ -98,9 +104,9 @@
 <header class="masthead">
 	<div class="wrap">
       
-  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="xm3の倉庫"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="xm3の倉庫 logo" class="animated fadeInDown"></a>
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="xm3 倉庫"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="xm3 倉庫 logo" class="animated fadeInDown"></a>
       
-      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">xm3の倉庫</a></h1>
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">xm3 倉庫</a></h1>
 		<h2 class="site-description animated fadeIn" itemprop="description"></h2>
 	</div>
 </header><!-- /.masthead -->
@@ -126,7 +132,7 @@
           <img src="http://localhost:4000/images/site-logo.png" class="bio-photo" alt="呂振麒 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">呂振麒</span></span>
-        <span class="entry-date date published"><time datetime="2017-05-18T00:00:00+08:00"><i class="fa fa-calendar-o"></i> May 18, 2017</time></span>
+        <span class="entry-date date published"><time datetime="2017-07-27T00:00:00+08:00"><i class="fa fa-calendar-o"></i> July 27, 2017</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
@@ -139,11 +145,82 @@
 
 <h2 id="section-1">題意：</h2>
 
-<p>先給出整數數列之後再給一些值，對於每個值求出數列中連續的一段區間，此區間和與值相差最少（絕對值）。</p>
+<p>題目會給一個有正有負的序列和一些詢問，每筆詢問包含一個數字ｔ，求出序列中一段連續區間總和絕對值最接近ｔ的區間，並印出該區間總和絕對值及範圍，區間不能為空。</p>
 
 <h2 id="section-2">思路：</h2>
 
+<p>先將區間前綴求出，綁上原本位置之後做排序，這樣任選兩個就代表了原序列上的一段連續區間，雙指標爬過去一邊更新答案即可。</p>
+
 <h2 id="code">code:</h2>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></td><td class="code"><pre><span class="kt">void</span> <span class="n">init</span><span class="p">(){</span>
+  <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">MP</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Y</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>		      <span class="c1">// 原位置
+</span>    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">X</span> <span class="o">=</span> <span class="n">getint</span><span class="p">()</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">X</span><span class="p">;</span>     <span class="c1">// 前綴合
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">sol</span><span class="p">(){</span>
+  <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span><span class="o">+</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">f1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">M</span><span class="o">--</span><span class="p">){</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">getint</span><span class="p">();</span>
+    <span class="n">f1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>         <span class="c1">// f2 : 下一個要被收進來的  f1 : 下一個要被移出的  range:[f1,f2)
+</span>    <span class="n">ans</span> <span class="o">=</span> <span class="n">MP</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span><span class="n">f2</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">f2</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">Y</span><span class="p">].</span><span class="n">X</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">X</span><span class="p">].</span><span class="n">X</span> <span class="o">-</span> <span class="n">q</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">abs</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">f2</span><span class="p">].</span><span class="n">X</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">f1</span><span class="p">].</span><span class="n">X</span> <span class="o">-</span> <span class="n">q</span><span class="p">))</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="n">MP</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span><span class="n">f2</span><span class="p">);</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">f1</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">f2</span> <span class="o">&amp;&amp;</span> <span class="n">arr</span><span class="p">[</span><span class="n">f2</span><span class="p">].</span><span class="n">X</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">f1</span><span class="p">].</span><span class="n">X</span> <span class="o">&gt;</span> <span class="n">q</span><span class="p">)</span> <span class="o">++</span><span class="n">f1</span><span class="p">;</span>
+      <span class="k">else</span> <span class="o">++</span><span class="n">f2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">X</span><span class="p">].</span><span class="n">Y</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">Y</span><span class="p">].</span><span class="n">Y</span><span class="p">)</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"%lld %lld %lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">Y</span><span class="p">].</span><span class="n">X</span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">X</span><span class="p">].</span><span class="n">X</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">Y</span><span class="p">].</span><span class="n">Y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">X</span><span class="p">].</span><span class="n">Y</span><span class="p">);</span>
+    <span class="k">else</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"%lld %lld %lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">Y</span><span class="p">].</span><span class="n">X</span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">X</span><span class="p">].</span><span class="n">X</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">X</span><span class="p">].</span><span class="n">Y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">Y</span><span class="p">].</span><span class="n">Y</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">N</span><span class="o">&gt;&gt;</span><span class="n">M</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="n">M</span><span class="p">)){</span>
+    <span class="n">init</span><span class="p">();</span>
+    <span class="n">sol</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 
         
@@ -176,10 +253,10 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/pro-sol/Telephonea-Lines/" class="btn" title="poj-3662 Telephone Lines">Previous</a>
+        <a href="http://localhost:4000/pro-sol/MooFest/" class="btn" title="poj-1990 MooFest">Previous</a>
       
       
-        <a href="http://localhost:4000/pro-sol/Jessica's-Reading-Problem/" class="btn" title="poj-3320 Jessica's Reading Problem">Next</a>
+        <a href="http://localhost:4000/pro-sol/Graveyard-Design/" class="btn" title="poj-2100 Graveyard Design">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
