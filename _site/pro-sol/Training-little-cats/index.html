@@ -1,0 +1,543 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>poj-3735 Training little cats &#8211; xm3 倉庫</title>
+<meta name="description" content="矩陣快速冪解遞迴">
+<meta name="keywords" content="poj, matrix">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="poj-3735 Training little cats">
+<meta name="twitter:description" content="矩陣快速冪解遞迴">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="poj-3735 Training little cats">
+<meta property="og:description" content="矩陣快速冪解遞迴">
+<meta property="og:url" content="http://localhost:4000/pro-sol/Training-little-cats/">
+<meta property="og:site_name" content="xm3 倉庫">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="3Y2I2JKgMnXBa5y4r6TZEUdGEyzRPrkWMEX0WKNGquE">
+
+
+
+<link rel="canonical" href="http://localhost:4000/pro-sol/Training-little-cats/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="xm3 倉庫 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="http://localhost:4000/articles/" >-文章-</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/pro-sol/" >-解題記錄-</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/tags/" >-Tag分類-</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/articles/poj-problemset/" >-POJ題單-</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="xm3 倉庫"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="xm3 倉庫 logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">xm3 倉庫</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">解題心得</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#poj" title="Pages tagged poj">poj</a></li><li><a href="http://localhost:4000/tags/#matrix" title="Pages tagged matrix">matrix</a></li>
+        </ul>
+        
+          <h1 class="entry-title">poj-3735 Training little cats</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://localhost:4000/images/site-logo.png" class="bio-photo" alt="呂振麒 bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">呂振麒</span></span>
+        <span class="entry-date date published"><time datetime="2017-08-06T00:00:00+08:00"><i class="fa fa-calendar-o"></i> August 06, 2017</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        
+        
+      </footer>
+      <div class="entry-content">
+        <h2 id="section">傳送門：</h2>
+
+<h4 id="training-little-catshttppojorgproblemid3735"><a href="http://poj.org/problem?id=3735">Training little cats</a></h4>
+
+<h2 id="section-1">題意：</h2>
+
+<p>有窩可憐的小貓\( C_1 \) ~ \( C_N \)，要被命令做一堆操作Ｍ次，包括：</p>
+
+<ol>
+  <li>得到一個堅果</li>
+  <li>把堅果全部送進肚子</li>
+  <li>把所有堅果與另一隻貓交換</li>
+</ol>
+
+<p>為了解就可憐的小貓，我們直接算出最後每隻貓有多少個堅果並給牠發上。</p>
+
+<h2 id="section-2">思路：</h2>
+
+<p>把這些操作想成一個矩陣，這樣做Ｍ次就是矩陣Ｍ次方，我們可以用矩陣快速冪砸他！</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left[
+\begin{matrix}
+ C_1    \\
+ \vdots \\
+ C_N
+\end{matrix}
+\right]
+
+=
+
+{
+\left[
+\begin{matrix}
+ ?      & \cdots & ?      \\
+ \vdots & \ddots & \vdots \\
+ ?      & \cdots & ?
+\end{matrix}
+\right]
+}^M
+
+\left[
+\begin{matrix}
+ C_1    \\
+ \vdots \\
+ C_N
+\end{matrix}
+\right] %]]></script>
+
+<p>第一個操作是得到一個堅果，為了達成這個操作我們擴展一下矩陣，加入一個常數１，這樣可以透過它乘上１來達成此操作。</p>
+
+<p>第二個操作是歸零，也就是將這隻貓的row全部歸零即可。</p>
+
+<p>第三個操作是交換，那就把這兩個row，swap一下就好了！</p>
+
+<p>先上個範例測資：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Sample Input:
+3 1 6
+g 1
+g 2
+g 2
+s 1 2
+g 3
+e 2
+0 0 0
+
+Sample Output:
+2 0 1
+
+</code></pre>
+</div>
+
+<p>初始矩陣為：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left[
+\begin{matrix}
+ C_1    \\
+ C_2    \\
+ C_3    \\
+ 1
+\end{matrix}
+\right]
+
+=
+
+{
+\left[
+\begin{matrix}
+
+  1 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 \\
+  0 & 0 & 1 & 0 \\
+  0 & 0 & 0 & 1
+
+\end{matrix}
+\right]
+}
+
+\left[
+\begin{matrix}
+ C_1    \\
+ C_2    \\
+ C_3    \\
+ 1
+\end{matrix}
+\right] %]]></script>
+
+<p>接著我們開始依據操作來製造方陣：</p>
+
+<p><code class="highlighter-rouge">g 1  // 第一隻貓得一個堅果</code></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left[
+  \begin{matrix}
+
+    1 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+
+  \end{matrix}
+  \right] %]]></script>
+
+<p><code class="highlighter-rouge">g 2  *2</code></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left[
+  \begin{matrix}
+
+    1 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 2 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+
+  \end{matrix}
+  \right] %]]></script>
+
+<p><code class="highlighter-rouge">s 1 2 // 第一隻貓與第二隻貓對調</code></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left[
+  \begin{matrix}
+
+    0 & 1 & 0 & 2 \\
+    1 & 0 & 0 & 1 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+
+  \end{matrix}
+  \right] %]]></script>
+
+<p><code class="highlighter-rouge">g 3</code></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left[
+  \begin{matrix}
+
+    0 & 1 & 0 & 2 \\
+    1 & 0 & 0 & 1 \\
+    0 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 1
+
+  \end{matrix}
+  \right] %]]></script>
+
+<p><code class="highlighter-rouge">e 2 // 第二隻貓堅果清空</code></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left[
+  \begin{matrix}
+
+    0 & 1 & 0 & 2 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 1
+
+  \end{matrix}
+  \right] %]]></script>
+
+<p>推完方陣後，套進去矩陣快速冪基本上就解完了，有可能吃一個TLE，吃TLE大概是矩陣乘法沒寫好，這矩陣大部分是０，可以對稀疏矩陣優化，詳細看code～</p>
+
+<h2 id="code">code:</h2>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre></td><td class="code"><pre><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+<span class="c1">// ele 為 矩陣內元素
+</span><span class="k">typedef</span> <span class="n">ll</span> <span class="n">ele</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">ele</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vec</span><span class="o">&gt;</span> <span class="n">mat</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">K</span><span class="p">;</span>
+
+<span class="n">mat</span> <span class="n">Mat</span><span class="p">,</span> <span class="n">Base</span><span class="p">;</span>
+
+<span class="n">mat</span> <span class="n">mul</span><span class="p">(</span><span class="n">mat</span> <span class="o">&amp;</span><span class="n">A</span><span class="p">,</span> <span class="n">mat</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">){</span>              <span class="c1">// 矩陣乘法
+</span>  <span class="c1">//assert(A[0].size() == B.size());        // include cassert
+</span>  <span class="n">mat</span> <span class="n">res</span> <span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">vec</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>    <span class="c1">// 可在稀疏矩陣時大大加速
+</span>      <span class="k">for</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">k</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">];</span>
+  <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">mat</span> <span class="n">pow</span><span class="p">(</span><span class="n">mat</span> <span class="n">A</span><span class="p">,</span> <span class="n">ll</span> <span class="n">n</span><span class="p">){</span>       <span class="c1">// 矩陣快速冪，必須是方陣
+</span>  <span class="n">mat</span> <span class="n">res</span> <span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">vec</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(;</span><span class="n">n</span><span class="p">;</span> <span class="n">A</span><span class="o">=</span><span class="n">mul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">A</span><span class="p">),</span> <span class="n">n</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span> <span class="n">res</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">A</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">init</span><span class="p">(){</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+  <span class="n">Mat</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+  <span class="n">Base</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+  <span class="n">Mat</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">vec</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+  <span class="n">Base</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">vec</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">Mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>      <span class="c1">// 元矩陣
+</span>  <span class="n">Base</span><span class="p">[</span><span class="n">N</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">while</span><span class="p">(</span><span class="n">K</span><span class="o">--</span><span class="p">){</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span> <span class="n">in</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">in</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'g'</span><span class="p">){</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+      <span class="n">Mat</span><span class="p">[</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">N</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">in</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'e'</span><span class="p">){</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">Mat</span><span class="p">[</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+      <span class="n">swap</span><span class="p">(</span><span class="n">Mat</span><span class="p">[</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">Mat</span><span class="p">[</span><span class="n">b</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">sol</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">mat</span> <span class="n">res</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="n">Mat</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
+  <span class="n">res</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">Base</span><span class="p">);</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">" </span><span class="se">\n</span><span class="s">"</span><span class="p">[</span><span class="n">i</span><span class="o">==</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">M</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">K</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">N</span><span class="o">||</span><span class="n">M</span><span class="o">||</span><span class="n">K</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">init</span><span class="p">();</span>
+    <span class="n">sol</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'xm35p4fu6'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/pro-sol/Quad-Tiling/" class="btn" title="poj-3420 Quad Tiling">Previous</a>
+      
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2017 呂振麒. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-87806949-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

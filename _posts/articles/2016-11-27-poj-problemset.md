@@ -186,12 +186,14 @@ comments: true
 
 #### 矩陣累乘    
 
-[POJ 3420 : Quad Tiling](http://poj.org/problem?id=3420)    
-[POJ 3735 : Training little cats](http://poj.org/problem?id=3735)    
+[POJ 3420 : Quad Tiling](http://poj.org/problem?id=3420)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Quad-Tiling/) </span>    
+[POJ 3735 : Training little cats](http://poj.org/problem?id=3735)  <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Training-little-cats/) </span>    
+  
 
 #### 搭配ＤＳ    
 
-[POJ 3171 : Cleaning Shifts](http://poj.org/problem?id=3171)    
+[POJ 3171 : Cleaning Shifts](http://poj.org/problem?id=3171) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cleaning-Shifts/) </span>    
+   
 
 ## 網路流    
 

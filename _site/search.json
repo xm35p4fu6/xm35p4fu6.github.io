@@ -2,6 +2,30 @@
 
   
     {
+      "title"			: "poj-3735 Training little cats",
+      "link"			: "http://localhost:4000/pro-sol/Training-little-cats/",
+      "excerpt"		: "矩陣快速冪解遞迴"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3420 Quad Tiling",
+      "link"			: "http://localhost:4000/pro-sol/Quad-Tiling/",
+      "excerpt"		: "矩陣快速冪"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3171 Cleaning Shifts",
+      "link"			: "http://localhost:4000/pro-sol/Cleaning-Shifts/",
+      "excerpt"		: "帶權區間覆蓋"
+    }
+  
+
+  
+    ,{
       "title"			: "poj-2739 Sum of Consecutive Prime Numbers",
       "link"			: "http://localhost:4000/pro-sol/Sum-of-Consecutive-Prime-Numbers/",
       "excerpt"		: "2 pointer"
