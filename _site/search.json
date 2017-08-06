@@ -10,9 +10,65 @@
 
   
     ,{
+      "title"			: "poj-3185 The Water Bowls",
+      "link"			: "http://localhost:4000/pro-sol/The-Water-Bowls/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-2549 Sumsets",
+      "link"			: "http://localhost:4000/pro-sol/Sumsets/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3977 Subset",
+      "link"			: "http://localhost:4000/pro-sol/Subset/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
       "title"			: "poj-3420 Quad Tiling",
       "link"			: "http://localhost:4000/pro-sol/Quad-Tiling/",
       "excerpt"		: "矩陣快速冪"
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-2674 Linear world",
+      "link"			: "http://localhost:4000/pro-sol/Linear-world/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3279 Fliptile",
+      "link"			: "http://localhost:4000/pro-sol/Fliptile/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-3276 Face The Right Way",
+      "link"			: "http://localhost:4000/pro-sol/Face-The-Right-Way/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: "poj-1222 Extended Lights Out",
+      "link"			: "http://localhost:4000/pro-sol/Extended-Lights-Out/",
+      "excerpt"		: ""
     }
   
 

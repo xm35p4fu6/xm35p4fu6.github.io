@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-本POJ題單出處為 ***"培養與鍛鍊 程式設計的邏輯腦 第二版"***
+本POJ題單出處為 ***"培養與鍛鍊 程式設計的邏輯腦 第二版"***(繁)、 ***"挑战程序设计竞赛"***（简）
 
 ## 搜尋
 
@@ -146,19 +146,19 @@ comments: true
 
 #### 反轉    
 
-[POJ 3276 : Face The Right Way](http://poj.org/problem?id=3276)    
-[POJ 3279 : Fliptile](http://poj.org/problem?id=3279)    
-[POJ 3185 : The Water Bowls](http://poj.org/problem?id=3185)    
-[POJ 1222 : Extended Lights Out](http://poj.org/problem?id=1222)    
+[POJ 3276 : Face The Right Way](http://poj.org/problem?id=3276) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Face-The-Right-Way/) </span>    
+[POJ 3279 : Fliptile](http://poj.org/problem?id=3279) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Fliptile/) </span>    
+[POJ 3185 : The Water Bowls](http://poj.org/problem?id=3185) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/The-Water-Bowls/) </span>    
+[POJ 1222 : Extended Lights Out](http://poj.org/problem?id=1222) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Extended-Lights-Out/) </span>    
 
 #### 彈性碰撞    
 
-[POJ 2674 : Linear world](http://poj.org/problem?id=2674)    
+[POJ 2674 : Linear world](http://poj.org/problem?id=2674) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Linear-world/) </span>    
 
 #### 折半完全列舉    
 
-[POJ 3977 : Subset](http://poj.org/problem?id=3977)    
-[POJ 2549 : Sumsets](http://poj.org/problem?id=2549)    
+[POJ 3977 : Subset](http://poj.org/problem?id=3977) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Subset/) </span>    
+[POJ 2549 : Sumsets](http://poj.org/problem?id=2549) <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Sumsets/) </span>    
 
 ### Binary Indexed Tree    
 
@@ -242,3 +242,6 @@ comments: true
 [POJ 3246 : Game](http://poj.org/problem?id=3246)    
 [POJ 3689 : Equations](http://poj.org/problem?id=3689)    
 
+<!--
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/) </span>    
+-->
