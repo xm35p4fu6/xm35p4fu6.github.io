@@ -31,7 +31,7 @@ comments: true
 
 #### 區間
 
-[POJ 2376 : Cleaning Shifts](http://poj.org/problem?id=2376)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cleaning-Shifts/) </span>  
+[POJ 2376 : Cleaning Shifts](http://poj.org/problem?id=2376)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cleaning-Shifts-greedy/) </span>  
 [POJ 1328 : Radar Installation](http://poj.org/problem?id=1328)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Radar-Installation/) </span>  
 [POJ 3190 : Stall Reservations](http://poj.org/problem?id=3190)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Stall-Reservations/) </span>  
 
