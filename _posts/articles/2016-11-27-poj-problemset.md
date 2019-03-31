@@ -54,8 +54,8 @@ comments: true
 
 #### 漸進式優化ＤＰ
 
-[POJ 1742 : Coins](http://poj.org/problem?id=1742)   
-[POJ 3046 : Ant Counting](http://poj.org/problem?id=3046)  
+[POJ 1742 : Coins](http://poj.org/problem?id=1742)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Coins/) </span>  
+[POJ 3046 : Ant Counting](http://poj.org/problem?id=3046)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Ant-Counting/) </span>  
 [POJ 3181 : Dollar Dayz](http://poj.org/problem?id=3181)  
 
 #### 其他ＤＰ問題
