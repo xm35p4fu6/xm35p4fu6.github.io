@@ -174,7 +174,7 @@ comments: true
 [POJ 2155 : Matrix](http://poj.org/problem?id=2155)
 <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Matrix/) </span>  
 [POJ 2886 : Who Gets the Most candles?](http://poj.org/problem?id=2886)
-<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Who-Gets-the-Most-Candles/) </span>  
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Who-Gets-the-Most-Candies/) </span>  
 
 
 ### 線段樹 分箱法    
