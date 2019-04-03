@@ -64,9 +64,12 @@ comments: true
 <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Wooden-Sticks/) </span>  
 [POJ 1631 : Bridging signals](http://poj.org/problem?id=1631)
 <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Bridging-signals/) </span>  
-[POJ 3666 : Making the Grade](http://poj.org/problem?id=3666)  
-[POJ 2392 : Space Elevator](http://poj.org/problem?id=2392)  
-[POJ 2184 : Cow Exhibition](http://poj.org/problem?id=2184)  
+[POJ 3666 : Making the Grade](http://poj.org/problem?id=3666)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Making-the-Grade/) </span>  
+[POJ 2392 : Space Elevator](http://poj.org/problem?id=2392)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Space-Elevator/) </span>  
+[POJ 2184 : Cow Exhibition](http://poj.org/problem?id=2184)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Cow-Exhibition/) </span>  
 
 
 ### Priority Queue
@@ -164,10 +167,14 @@ comments: true
 
 ### Binary Indexed Tree    
 
-[POJ 1990 : MooFest](http://poj.org/problem?id=1990)    
-[POJ 3109 : Inner Vertices](http://poj.org/problem?id=3109)    
-[POJ 2155 : Matrix](http://poj.org/problem?id=2155)    
-[POJ 2886 : Who Gets the Most candles?](http://poj.org/problem?id=2886)    
+[POJ 1990 : MooFest](http://poj.org/problem?id=1990)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/MooFest/) </span>  
+[POJ 3109 : Inner Vertices](http://poj.org/problem?id=3109)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Inner-Vertices/) </span>  
+[POJ 2155 : Matrix](http://poj.org/problem?id=2155)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Matrix/) </span>  
+[POJ 2886 : Who Gets the Most candles?](http://poj.org/problem?id=2886)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Who-Gets-the-Most-candles?/) </span>  
 
 
 ### 線段樹 分箱法    
