@@ -56,12 +56,14 @@ comments: true
 
 [POJ 1742 : Coins](http://poj.org/problem?id=1742)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Coins/) </span>  
 [POJ 3046 : Ant Counting](http://poj.org/problem?id=3046)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Ant-Counting/) </span>  
-[POJ 3181 : Dollar Dayz](http://poj.org/problem?id=3181)  
+[POJ 3181 : Dollar Dayz](http://poj.org/problem?id=3181)<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Dollar-Dayz/) </span>  
 
 #### 其他ＤＰ問題
 
-[POJ 1065 : Wooden Sticks](http://poj.org/problem?id=1065)  
-[POJ 1631 : Bridging signals](http://poj.org/problem?id=1631)  
+[POJ 1065 : Wooden Sticks](http://poj.org/problem?id=1065)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Wooden-Sticks/) </span>  
+[POJ 1631 : Bridging signals](http://poj.org/problem?id=1631)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Bridging-signals/) </span>  
 [POJ 3666 : Making the Grade](http://poj.org/problem?id=3666)  
 [POJ 2392 : Space Elevator](http://poj.org/problem?id=2392)  
 [POJ 2184 : Cow Exhibition](http://poj.org/problem?id=2184)  
