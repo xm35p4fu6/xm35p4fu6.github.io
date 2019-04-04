@@ -182,7 +182,7 @@ comments: true
 [POJ 3264 : Balanced Lineup](http://poj.org/problem?id=3264)
 <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Balanced-Lineup/) </span>  
 [POJ 3368 : Frequent values](http://poj.org/problem?id=3368)
-<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Frequent-valuesp/) </span>  
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Frequent-values/) </span>  
 [POJ 3470 : Walls](http://poj.org/problem?id=3470)
 <span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Walls/) </span>  
 [POJ 1201 : Intervals](http://poj.org/problem?id=1201)
