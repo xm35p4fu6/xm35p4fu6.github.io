@@ -179,10 +179,14 @@ comments: true
 
 ### 線段樹 分箱法    
 
-[POJ 3264 : Balanced Lineup](http://poj.org/problem?id=3264)    
-[POJ 3368 : Frequent values](http://poj.org/problem?id=3368)    
-[POJ 3470 : Walls](http://poj.org/problem?id=3470)    
-[POJ 1201 : Intervals](http://poj.org/problem?id=1201)    
+[POJ 3264 : Balanced Lineup](http://poj.org/problem?id=3264)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Balanced-Lineup/) </span>  
+[POJ 3368 : Frequent values](http://poj.org/problem?id=3368)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Frequent-valuesp/) </span>  
+[POJ 3470 : Walls](http://poj.org/problem?id=3470)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Walls/) </span>  
+[POJ 1201 : Intervals](http://poj.org/problem?id=1201)
+<span style="margin-left:1em;">[<font color="green"><b>ċȯḋė</b></font>](/pro-sol/Intervals/) </span>  
 
 ## 進階ＤＰ    
 
